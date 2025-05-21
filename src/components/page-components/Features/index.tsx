@@ -3,8 +3,8 @@ import { featureData } from "./featureData";
 
 const Features = () => {
   return (
-    <section id="home" className="relative z-10 overflow-hidden pt-24">
-      <div className="flex flex-col container max-w-5xl mx-auto">
+    <section id="features" className="relative z-10 overflow-hidden pt-24">
+      <div className="flex flex-col container max-w-6xl mx-auto">
         <div className="flex flex-col justify-center items-center gap-12">
           <h1 className="font-semibold text-3xl max-w-md text-center mx-auto">
             Everything you need to know, In one place.

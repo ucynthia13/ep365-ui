@@ -8,7 +8,9 @@ import { motion, AnimatePresence } from "framer-motion";
 type Category = keyof typeof whyUsData;
 
 const WhyUs = () => {
-  const [category, setCategory] = useState<Category>(Object.keys(whyUsData)[0] as Category);
+  const [category, setCategory] = useState<Category>(
+    Object.keys(whyUsData)[0] as Category
+  );
   const current = whyUsData[category];
 
   return (
@@ -34,7 +36,7 @@ const WhyUs = () => {
               onClick={() => setCategory(item as Category)}
               className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
                 item === category
-                  ? "bg-primary/70 text-white border-black/70"
+                  ? "bg-primary/50 text-white border-black/70"
                   : "border-primary/70 text-black/70"
               }`}
             >
@@ -50,7 +52,7 @@ const WhyUs = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="grid grid-cols-1 items-center gap-6 px-8 pt-12 md:grid-cols-2"
+            className="grid grid-cols-1 items-center gap-4 px-8 pt-12 md:grid-cols-2"
           >
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -67,11 +69,19 @@ const WhyUs = () => {
               />
             </motion.div>
             <div>
+              <motion.h5
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="mb-2 text-sm font-semibold"
+              >
+                {category}
+              </motion.h5>
               <motion.h3
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="mb-6 text-xl font-bold"
+                className="mb-6 text-2xl font-bold"
               >
                 {category}
               </motion.h3>
