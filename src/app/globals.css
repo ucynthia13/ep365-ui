@@ -44,26 +44,26 @@
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.98 0.015 85);
+  --background: oklch(0.99 0.01 85);
   --foreground: oklch(0.2 0.01 85);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
