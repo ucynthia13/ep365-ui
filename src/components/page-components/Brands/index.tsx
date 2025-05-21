@@ -1,6 +1,5 @@
 "use client"
 
-import { Brand } from "@/types/brand";
 import Image from "next/image";
 import brandsData from "./brandsData";
 import { Marquee } from "../magicui/marquee";
