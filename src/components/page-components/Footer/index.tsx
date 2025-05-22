@@ -71,7 +71,7 @@ const Footer = ({
   legalLinks = defaultLegalLinks,
 }: FooterProps) => {
   return (
-    <section className="pt-16 rounded-tl-4xl rounded-tr-4xl border-t bg-white relative z-10">
+    <section className="pt-16 px-6 rounded-tl-4xl rounded-tr-4xl border-t bg-white relative z-10">
       <div className="container mx-auto max-w-7xl">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
