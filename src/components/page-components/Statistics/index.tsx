@@ -28,7 +28,7 @@ const Statistics = () => {
           {stats.map((item, index) => (
             <div
               key={index}
-              className="border-l-3 border-black/50 pl-4 flex flex-col items-start gap-2"
+              className="border-l-1 border-black/30 pl-4 flex flex-col items-start gap-2"
             >
               <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold">
                 {item.value}

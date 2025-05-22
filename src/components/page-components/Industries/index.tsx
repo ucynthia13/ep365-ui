@@ -23,12 +23,12 @@ const Industries = () => {
           with complex purchasing requirements and fast-moving supply chains.
         </p>
         <div className="flex gap-4 mt-12 mb-6">
-          <Button className="bg-primary/50 border px-6 border-black/70 text-white rounded-full">
+          <Button className="bg-primary/50 border px-6 border-black/40 text-white rounded-full">
             Industry
           </Button>
           <Button
             variant="outline"
-            className="rounded-full border px-6 border-black/70"
+            className="rounded-full border px-6 border-black/40"
           >
             Company Size
           </Button>

@@ -8,7 +8,7 @@ import { Marquee } from "@/components/magicui/marquee";
 
 const Brands = () => {
   return (
-    <section id="brands" className="relative z-10 pt-16 ">
+    <section id="brands" className="relative z-10 pt-16">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
