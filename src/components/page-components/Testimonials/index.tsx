@@ -8,14 +8,14 @@ import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
-    image: "/images/testimonial-1.jpg",
+    image: "/images/testimonials/Stacks image.svg",
     quote:
       "Working with the EP365 Procurement Cloud has been an absolute pleasure. Their team is responsive, highly skilled, and truly invested in solving our unique procurement challenges. Every request we made was met with enthusiasm and quick execution.",
     name: "Jamie Walker",
     title: "VP of Supply Chain, BrightSpan Industries",
   },
   {
-    image: "/images/testimonial-2.jpg",
+    image: "/images/industries/entertainment.svg",
     quote:
       "EP365 transformed how we handle procurement. The support and customization exceeded our expectations.",
     name: "Alex Morgan",
@@ -98,9 +98,9 @@ function TestimonialCard({
       <Image
         src={testimonial.image}
         alt="testimonial"
-        className="w-50 h-50 object-cover"
-        width={50}
-        height={50}
+        className="w-100 h-100 object-cover"
+        width={100}
+        height={100}
       />
       <div className="p-6 flex flex-col justify-between">
         <p className={cn("mb-4 h-30", className)}>
@@ -110,7 +110,7 @@ function TestimonialCard({
           <p className="font-semibold">{testimonial.name}</p>
           <p className="text-sm">{testimonial.title}</p>
         </div>
-        <Button className="mt-4 bg-primary/50 text-white px-4 py-2 rounded hover:bg-primary/70 transition">
+        <Button className="mt-4 bg-primary/50 text-white px-4 py-2 rounded hover:bg-primary/70 transition w-1/2">
           Read Case Study
         </Button>
       </div>

@@ -61,15 +61,14 @@ const defaultLegalLinks = [
 
 const Footer = ({
   logo = {
-    url: "https://www.shadcnblocks.com",
-    src: "https://www.shadcnblocks.com/images/block/logos/shadcnblockscom-icon.svg",
-    alt: "logo",
-    title: "Shadcnblocks.com",
+    url: "ep356.com",
+    src: "/images/logos/EP365 Logo.svg",
+    alt: "EP365 Logo",
+    title: "EP365",
   },
   sections = defaultSections,
-  description = "A collection of components for your startup business or side project.",
   socialLinks = defaultSocialLinks,
-  copyright = "© 2024 Shadcnblocks.com. All rights reserved.",
+  copyright = "Copyright © ep365. All rights Reserved.",
   legalLinks = defaultLegalLinks,
 }: FooterProps) => {
   return (
@@ -83,16 +82,13 @@ const Footer = ({
                   src={logo.src}
                   alt={logo.alt}
                   title={logo.title}
-                  className="h-8" 
-                  width={20}
-                  height={20}
+                  // className="h-8" 
+                  width={100}
+                  height={100}
                 />
               </a>
-              <h2 className="text-xl font-semibold">{logo.title}</h2>
             </div>
-            <p className="max-w-[70%] text-sm text-muted-foreground">
-              {description}
-            </p>
+
             <ul className="flex items-center space-x-6 text-muted-foreground">
               {socialLinks.map((social, idx) => (
                 <li key={idx} className="font-medium hover:text-primary">

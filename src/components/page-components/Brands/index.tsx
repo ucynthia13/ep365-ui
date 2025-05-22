@@ -8,7 +8,7 @@ import { Marquee } from "@/components/magicui/marquee";
 
 const Brands = () => {
   return (
-    <section className="relative z-10 pt-24">
+    <section id="brands" className="relative z-10 pt-24">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -19,9 +19,9 @@ const Brands = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, delay: 0.2 }}
-          className="mb-16 text-center text-2xl font-bold text-black sm:text-3xl"
+          className="mb-16 text-center text-2xl font-semibold text-black sm:text-3xl max-w-sm mx-auto"
         >
-          With help from the biggest companies
+          Trusted by leading businesses
         </motion.h2>
         <BrandsScrollable />
       </motion.div>
@@ -56,7 +56,7 @@ const BrandCard = ({ brand }: { brand: Brand }) => {
 
 export const BrandsScrollable = () => {
   return (
-    <div className="relative container mx-auto flex w-full flex-col items-center justify-center overflow-hidden px-8">
+    <div className="relative container max-w-5xl mx-auto flex w-full flex-col items-center justify-center overflow-hidden px-8">
       <Marquee pauseOnHover className="[--duration:27s]">
         {brandsData.map((brand) => (
           <BrandCard key={brand.id} brand={brand} />

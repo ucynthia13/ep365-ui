@@ -1,22 +1,22 @@
 export const whyUsData = {
   "Completely Flexible": {
     description:
-      "e-Commerce is one of the fastest growing business models as every retail business is reaching the digital landscape. Build a scalable and robust e-store with an experienced team. Grow with proper cart management, payment integration, social media integration, order management, tracking, and product management to reach greater heights.",
-    image: "/images/industries/ecommerce.svg",
+      "EP365's low-code platform empowers you to adapt every step of your procurement workflow. Customize processes, automate tasks, and fine-tune operations to perfectly align with your business goals.",
+    image: "/images/whyus/home card.svg",
   },
   "Easy To Use": {
     description:
-      "Empower learning with custom eLearning platforms, LMS solutions, and virtual classrooms. We build engaging and scalable education software tailored for institutions and edtech startups.",
+      "EP365 is designed with user experience at its core. Its intuitive interface and guided workflows make it simple for teams to onboard, collaborate, and manage procurement with minimal training.",
     image: "/images/industries/education.svg",
   },
-  "Faster time to value": {
+  "Faster Time to Value": {
     description:
-      "From appointment scheduling to telemedicine and EHR systems, we build secure and compliant healthcare software to revolutionize patient care and streamline workflows.",
+      "Launch your procurement solution faster with EP365's pre-built modules and rapid configuration. Realize ROI quickly through streamlined implementation and immediate process improvements.",
     image: "/images/industries/health.svg",
   },
-  "Customer support": {
+  "Customer Support": {
     description:
-      "Leverage tech in real estate with dynamic listing platforms, virtual tours, CRM systems, and property management tools to drive smarter decisions and faster sales.",
+      "Our expert support team is with you every step of the way—from onboarding to optimization. EP365 offers responsive assistance, ensuring your procurement processes run smoothly and efficiently.",
     image: "/images/industries/realestate.svg",
   }
 };

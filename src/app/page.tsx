@@ -1,5 +1,5 @@
 
-import Banner from "@/components/page-components/Banner";
+import Banner from "@/components/page-components/Banner/bottom-banner";
 import Brands from "@/components/page-components/Brands";
 import Features from "@/components/page-components/Features";
 import Footer from "@/components/page-components/Footer";

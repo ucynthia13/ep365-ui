@@ -1,28 +1,26 @@
-import { CalendarCheck, CalendarX, ChartBar, House, User } from "lucide-react";
-
 export const featureData = [
   {
-    icon: ChartBar,
+    image: "/images/features/SVG (1).svg",
     description: "Keep track of spending and staywithin the budget",
   },
   {
-    icon: CalendarX,
+    image: "/images/features/SVG (2).svg",
     description: "Keep track of spending and staywithin the budget",
   },
   {
-    icon: CalendarCheck,
+    image: "/images/features/SVG (3).svg",
     description: "Keep track of spending and staywithin the budget",
   },
   {
-    icon: House,
+    image: "/images/features/SVG (4).svg",
     description: "Keep track of spending and staywithin the budget",
   },
   {
-    icon: ChartBar,
+    image: "/images/features/SVG (5).svg",
     description: "Keep track of spending and staywithin the budget",
   },
   {
-    icon: User,
+    image: "/images/features/SVG (6).svg",
     description: "Keep track of spending and staywithin the budget",
   },
 ];
