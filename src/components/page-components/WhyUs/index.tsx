@@ -14,7 +14,7 @@ const WhyUs = () => {
   const current = whyUsData[category];
 
   return (
-    <section className="relative z-10 py-16 md:pt-20 lg:pt-24">
+    <section id="why-us" className="relative z-10 pt-16 md:pt-20 lg:pt-24">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -25,18 +25,18 @@ const WhyUs = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, delay: 0.2 }}
-          className="mb-16 text-center text-xl md:text-2xl font-semibold text-black lg:text-3xl"
+          className="mb-12 text-center text-xl md:text-2xl font-semibold text-black lg:text-3xl"
         >
           Why Choose EP365 Procurement Cloud
         </motion.h2>
-        <motion.div className="mt-6 flex flex-wrap justify-center items-center gap-4 px-8">
+        <motion.div className="mb-6 flex flex-wrap justify-center items-center gap-4 px-8">
           {Object.keys(whyUsData).map((item) => (
             <button
               key={item}
               onClick={() => setCategory(item as Category)}
               className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
                 item === category
-                  ? "bg-primary/50 text-white border border-black/70"
+                  ? "bg-primary/50 text-white border border-black/40"
                   : "border-primary/70 text-black/70"
               }`}
             >
@@ -97,7 +97,7 @@ const WhyUs = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2 }}
-                className="mt-8 rounded-full text-white bg-primary/50 border border-black/70 px-4 py-2 text-sm font-medium transition duration-200 hover:scale-[1.05] hover:bg-primary/70"
+                className="mt-8 rounded-full text-white bg-primary/50 border border-black/40 px-6 py-2 text-sm font-medium transition duration-200 hover:scale-[1.05] hover:bg-primary/70"
               >
                 Get Started
               </motion.button>
