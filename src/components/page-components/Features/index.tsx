@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Features = () => {
   return (
-    <section id="features" className="relative z-10 overflow-hidden pt-24">
+    <section id="features" className="relative z-10 overflow-hidden pt-16 md:pt-20 lg:pt-24">
       <div className="flex flex-col container max-w-6xl mx-auto">
         <div className="flex flex-col justify-center items-center gap-6">
           <motion.h2
@@ -15,7 +15,7 @@ const Features = () => {
             transition={{ duration: 0.2, delay: 0.2 }}
             className="font-semibold text-3xl max-w-md text-center mx-auto"
           >
-            Everything you need to know, In one place.{" "}
+            Everything you need to know, In one place.
           </motion.h2>
           <p className="max-w-xl mx-auto text-center">
             Still juggling emails, Excel files, and scattered tools? EP365
