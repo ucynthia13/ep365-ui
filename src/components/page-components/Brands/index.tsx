@@ -13,7 +13,7 @@ const Brands = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.3, delay: 0.2 }}
-        className="container"
+        className="container px-6"
       >
         <motion.h2
           initial={{ opacity: 0, y: 10 }}

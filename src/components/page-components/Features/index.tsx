@@ -7,17 +7,17 @@ import { motion } from "framer-motion";
 const Features = () => {
   return (
     <section id="features" className="relative z-10 overflow-hidden pt-16 md:pt-20 lg:pt-24">
-      <div className="flex flex-col container max-w-6xl mx-auto">
+      <div className="flex flex-col container max-w-6xl mx-auto px-6">
         <div className="flex flex-col justify-center items-center gap-6">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: 0.2 }}
-            className="font-semibold text-3xl max-w-md text-center mx-auto"
+            className="font-semibold text-2xl sm:text-3xl max-w-sm sm:max-w-md text-center mx-auto"
           >
             Everything you need to know, In one place.
           </motion.h2>
-          <p className="max-w-xl mx-auto text-center">
+          <p className="max-w-md sm:max-w-xl mx-auto text-center">
             Still juggling emails, Excel files, and scattered tools? EP365
             unites your entire procurement workflow into one streamlined
             platform. From requests and approvals to supplier data and analytics

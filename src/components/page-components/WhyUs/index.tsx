@@ -19,17 +19,17 @@ const WhyUs = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.2 }}
-        className="container mx-auto max-w-6xl"
+        className="container mx-auto max-w-6xl px-6 flex flex-col justify-center items-center"
       >
         <motion.h2
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, delay: 0.2 }}
-          className="mb-12 text-center text-xl md:text-2xl font-semibold text-black lg:text-3xl"
+          className="mb-12 text-center text-2xl font-semibold sm:text-3xl max-w-sm sm:max-w-md"
         >
           Why Choose EP365 Procurement Cloud
         </motion.h2>
-        <motion.div className="mb-6 flex flex-wrap justify-center items-center gap-4 px-8">
+        <motion.div className="mb-6 flex flex-wrap justify-center items-center gap-4">
           {Object.keys(whyUsData).map((item) => (
             <button
               key={item}
@@ -52,7 +52,7 @@ const WhyUs = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="grid grid-cols-1 items-center gap-4 px-8 pt-12 md:grid-cols-2"
+            className="grid grid-cols-1 items-center gap-4 pt-12 md:grid-cols-2"
           >
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -68,7 +68,7 @@ const WhyUs = () => {
                 className="h-70 rounded-4xl object-cover shadow-xl transition duration-300 hover:scale-[1.03]"
               />
             </motion.div>
-            <div>
+            <div className="mt-6 md:mt-0">
               <motion.h5
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
