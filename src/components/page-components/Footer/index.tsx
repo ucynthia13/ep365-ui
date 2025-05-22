@@ -28,21 +28,20 @@ interface FooterProps {
 
 const defaultSections = [
   {
-    title: "Company",
+    title: "Platform",
     links: [
-      { name: "About", href: "#" },
-      { name: "Team", href: "#" },
-      { name: "Blog", href: "#" },
-      { name: "Careers", href: "#" },
+      { name: "Pricing", href: "#" },
+      { name: "Features", href: "#" },
+      { name: "Soluions", href: "#" },
+      { name: "About EP365", href: "#" },
     ],
   },
   {
-    title: "Resources",
+    title: "More",
     links: [
-      { name: "Help", href: "#" },
-      { name: "Sales", href: "#" },
-      { name: "Advertise", href: "#" },
-      { name: "Privacy", href: "#" },
+      { name: "Contact Us", href: "#" },
+      { name: "FAQs", href: "#" },
+      { name: "Blogs", href: "#" },
     ],
   },
 ];
@@ -72,7 +71,7 @@ const Footer = ({
   legalLinks = defaultLegalLinks,
 }: FooterProps) => {
   return (
-    <section className="pt-24 relative z-10">
+    <section className="pt-16 rounded-tl-4xl rounded-tr-4xl border-t bg-white relative z-10">
       <div className="container mx-auto max-w-7xl">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
@@ -89,7 +88,7 @@ const Footer = ({
               </a>
             </div>
 
-            <ul className="flex items-center space-x-6 text-muted-foreground">
+            <ul className="flex items-center space-x-2 text-muted-foreground">
               {socialLinks.map((social, idx) => (
                 <li key={idx} className="font-medium hover:text-primary">
                   <a href={social.href} aria-label={social.label}>
@@ -117,7 +116,7 @@ const Footer = ({
             ))}
           </div>
         </div>
-        <div className="mt-8 flex flex-col justify-between gap-4 border-t py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">
+        <div className="mt-16 max-w-5xl mx-auto flex flex-col justify-between gap-4 border-t py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">
           <p className="order-2 lg:order-1">{copyright}</p>
           <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row">
             {legalLinks.map((link, idx) => (
