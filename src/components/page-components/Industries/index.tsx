@@ -9,7 +9,7 @@ const Industries = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false }}
-      className="pt-16 max-w-5xl mx-auto rounded-2xl"
+      className="relative z-10 pt-16 md:pt-20 lg:pt-24 max-w-5xl mx-auto rounded-2xl"
     >
       <div className="flex flex-col justify-center items-center gap-4">
         <h1 className="font-bold text-md bg-gradient-to-r from-[#FFFFFF] to-[#7612C2] bg-clip-text text-transparent">
