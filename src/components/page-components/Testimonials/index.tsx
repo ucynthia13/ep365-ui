@@ -31,14 +31,13 @@ const Testimonials = () => {
   const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
 
   return (
-    <div className="relative py-16 z-10">
+    <div className="relative pt-16 z-10">
       <div className="flex justify-center items-center mb-12">
-        <h1 className="font-semibold text-2xl max-w-md text-center">
+        <h1 className="font-semibold text-3xl max-w-md mx-auto text-center">
           What customers love about EP365 Procurement Cloud
         </h1>
       </div>
       <div className="mx-auto max-w-5xl px-4 flex items-center justify-center relative overflow-visible">
-        {/* Left Arrow */}
         <button
           onClick={prev}
           className="absolute -left-6 top-1/2 -translate-y-1/2 p-2 bg-black text-white rounded-full z-10"
@@ -46,17 +45,14 @@ const Testimonials = () => {
           <ArrowLeft className="w-5 h-5" />
         </button>
 
-        {/* Carousel */}
         <div className="relative w-full flex justify-center">
-          {/* Peeking Card */}
-          <div className="absolute top-0 mt-8 h-50 opacity-50 scale-95 transition-all duration-300 pointer-events-none z-0">
+         <div className="absolute top-0 mt-8 h-50 opacity-50 scale-95 transition-all duration-300 pointer-events-none z-0">
             <TestimonialCard
               testimonial={testimonials[(index + 1) % testimonials.length]}
               className="h-30"
             />
           </div>
 
-          {/* Main Card */}
           <div className="relative z-10 w-full max-w-[85%]">
             <TestimonialCard
               testimonial={testimonials[index]}
@@ -65,7 +61,6 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Right Arrow */}
         <button
           onClick={next}
           className="absolute -right-6 top-1/2 -translate-y-1/2 p-2 bg-black text-white rounded-full z-10"
