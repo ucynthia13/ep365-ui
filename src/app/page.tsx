@@ -1,5 +1,6 @@
 
 import Banner from "@/components/page-components/Banner/bottom-banner";
+import Description from "@/components/page-components/Banner/Description";
 import Brands from "@/components/page-components/Brands";
 import Features from "@/components/page-components/Features";
 import Footer from "@/components/page-components/Footer";
@@ -24,6 +25,7 @@ export default function Home() {
       <Brands />
       <Features />
       <WhyUs />
+      <Description />
       <Industries />
       <Statistics />
       <Testimonials />
