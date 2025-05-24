@@ -1,0 +1,46 @@
+export const pricingPlans = [
+  {
+    name: "Starter",
+    description: "Perfect for small businesses and startups",
+    price: "Free",
+    features: [
+      "Basic digital presence",
+      "Standard templates",
+      "Community support",
+      "1 GB storage",
+    ],
+    cta: "Start Free",
+    popular: false,
+  },
+  {
+    name: "Pro",
+    description: "Ideal for growing businesses",
+    price: "$29",
+    period: "/month",
+    features: [
+      "Advanced digital tools",
+      "Premium templates",
+      "Priority support",
+      "10 GB storage",
+      "Custom domain",
+    ],
+    cta: "Get Started",
+    popular: true,
+  },
+  {
+    name: "Enterprise",
+    description: "For large organizations with complex needs",
+    price: "$99",
+    period: "/month",
+    features: [
+      "Enterprise-grade solutions",
+      "Dedicated account manager",
+      "24/7 premium support",
+      "Unlimited storage",
+      "Custom integrations",
+      "Advanced analytics",
+    ],
+    cta: "Contact Sales",
+    popular: false,
+  },
+];

@@ -1,124 +1,92 @@
-"use client";
-
-import { useState } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+"use client"
 import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { testimonials } from "./testimonialsData";
 import { motion } from "framer-motion";
 
-const testimonials = [
-  {
-    image: "/images/testimonials/Stacks image.svg",
-    quote:
-      "Working with the EP365 Procurement Cloud has been an absolute pleasure. Their team is responsive, highly skilled, and truly invested in solving our unique procurement challenges. Every request we made was met with enthusiasm and quick execution.",
-    name: "Jamie Walker",
-    title: "VP of Supply Chain, BrightSpan Industries",
-  },
-  {
-    image: "/images/industries/entertainment.svg",
-    quote:
-      "EP365 transformed how we handle procurement. The support and customization exceeded our expectations.",
-    name: "Alex Morgan",
-    title: "Director of Operations, BuildTech Co.",
-  },
-];
-
 const Testimonials = () => {
-  const [index, setIndex] = useState(0);
-
-  const prev = () =>
-    setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
-
   return (
-    <div className="relative pt-16 z-10 px-8">
-      <div className="flex justify-center items-center mb-12">
-        <motion.h2
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2, delay: 0.2 }}
-          className="font-semibold text-2xl sm:text-3xl max-w-sm sm:max-w-md text-center mx-auto capitalize"
-        >
-          What Customers love about EP365 procurement cloud
-        </motion.h2>
-      </div>
-      <div className="mx-auto max-w-5xl px-4 flex items-center justify-center relative overflow-visible">
-        <Button
-          onClick={prev}
-          className="absolute -left-6 top-1/2 -translate-y-1/2 p-2 bg-black text-white rounded-full z-10"
-        >
-          <ArrowLeft className="w-5 h-5" />
-        </Button>
-
-        <div className="relative w-full flex justify-center">
-          <div className="absolute top-0 mt-8 h-30 opacity-50 scale-95 transition-all duration-300 pointer-events-none z-0">
-            <TestimonialCard
-              testimonial={testimonials[(index + 1) % testimonials.length]}
-              className="h-70"
-              imageHeight="h-60"
-            />
+    <section className="relative z-10 py-12 sm:py-16 lg:py-20">
+      <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center">
+          <div className="max-w-2xl mx-auto">
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2, delay: 0.2 }}
+              className="font-semibold text-4xl sm:text-4xl lg:text-5xl text-center mb-4 capitalize"
+            >
+              Our clients speak of us
+            </motion.h2>
+            <p className="text-center text-lg">
+              200+ clients have put trust in us
+            </p>
           </div>
 
-          <div className="relative z-10 w-full max-w-[85%]">
-            <TestimonialCard
-              testimonial={testimonials[index]}
-              className="h-90"
-              imageHeight="h-80"
-            />
+          <div className="mt-8 text-center md:mt-16 md:order-3">
+            <a
+              href="#"
+              className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"
+            >
+              Check all 200 reviews
+            </a>
+          </div>
+
+          <div className="relative mt-10 md:mt-16 md:order-2">
+            <div className="relative grid max-w-l grid-cols-1 sm:grid-cols-2 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
+              {testimonials.map((testimonial, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col overflow-hidden shadow-sm rounded-xl"
+                >
+                  <div className="flex flex-col justify-between flex-1 p-6 lg:py-8 lg:px-7">
+                    <div className="flex-1">
+                      <div className="flex items-center">
+                        {[...Array(5)].map((_, i) => (
+                          <svg
+                            key={i}
+                            className="w-5 h-5 text-[#FDB241]"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+
+                      <blockquote className="flex-1 mt-8">
+                        <p className="text-lg leading-relaxed text-gray-900 font-pj">
+                          “{testimonial.quote}”
+                        </p>
+                      </blockquote>
+                    </div>
+
+                    <div className="flex items-center mt-8">
+                      <Image
+                        className="flex-shrink-0 object-cover rounded-full w-11 h-11"
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        width={12}
+                        height={12}
+                      />
+                      <div className="ml-4">
+                        <p className="text-base font-bold text-gray-900 font-pj">
+                          {testimonial.name}
+                        </p>
+                        <p className="mt-0.5 text-sm font-pj text-gray-600">
+                          {testimonial.title}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-
-        <Button
-          onClick={next}
-          className="absolute -right-6 top-1/2 -translate-y-1/2 p-2 bg-black text-white rounded-full z-10"
-        >
-          <ArrowRight className="w-5 h-5" />
-        </Button>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default Testimonials;
-
-type Testimonial = {
-  image: string;
-  quote: string;
-  name: string;
-  title: string;
-};
-
-function TestimonialCard({
-  testimonial,
-  className,
-  imageHeight
-}: {
-  testimonial: Testimonial;
-  className?: string;
-  imageHeight: string
-}) {
-  return (
-    <div className={cn("bg-white rounded-xl border border-gray overflow-hidden grid grid-cols-1 md:grid-cols-2", className)}>
-      <div className="p-5 hidden md:block">
-        <Image
-          src={testimonial.image}
-          alt="testimonial"
-          className={cn("w-100 object-cover rounded-xl", imageHeight)}
-          width={100}
-          height={100}
-        />
-      </div>
-      <div className="p-6 flex flex-col justify-between">
-        <p className="line-clamp-6">“{testimonial.quote}”</p>
-        <div>
-          <p className="font-semibold">{testimonial.name}</p>
-          <p className="text-sm">{testimonial.title}</p>
-        </div>
-        <Button className="bg-primary/50 rounded-md text-white p-6 hover:bg-primary/70 transition w-1/2">
-          Read Case Study
-        </Button>
-      </div>
-    </div>
-  );
-}

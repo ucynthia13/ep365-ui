@@ -1,50 +1,52 @@
 "use client";
 import React from "react";
 import { featureData } from "./featureData";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Features = () => {
   return (
-    <section id="features" className="relative z-10 overflow-hidden pt-16 md:pt-20 lg:pt-24">
-      <div className="flex flex-col container max-w-6xl mx-auto px-6">
+    <section
+      id="features"
+      className="relative z-10 overflow-hidden py-16 md:py-24 lg:py-32 bg-gray-950 text-white"
+    >
+      <div className="absolute -top-20 -right-20 w-90 h-90 bg-white/30 rounded-full blur-[100px]"></div>
+      <div className="absolute -bottom-20 -left-20 w-90 h-90 bg-white/30 rounded-full blur-[100px]"></div>
+
+      <div className="flex flex-col container max-w-5xl mx-auto px-6">
         <div className="flex flex-col justify-center items-center gap-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: 0.2 }}
-            className="font-semibold text-2xl sm:text-3xl max-w-sm sm:max-w-md text-center mx-auto"
-          >
-            Everything you need to know, In one place.
-          </motion.h2>
-          <p className="max-w-md sm:max-w-xl mx-auto text-center">
-            Still juggling emails, Excel files, and scattered tools? EP365
-            unites your entire procurement workflow into one streamlined
-            platform. From requests and approvals to supplier data and analytics
-            — it’s all here, simplified.
-          </p>
-          <div className="max-w-4xl mx-auto mt-12 bg-gradient-to-tr from-white via-white to-primary/30 p-12 rounded-2xl">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
-              {featureData.map((feature, index) => {
-                return (
-                  <div
-                    className="flex flex-col justify-center items-center text-center gap-4"
-                    key={index}
-                  >
-                    <div className="text-center">
-                      <Image
-                        src={feature.image}
-                        alt="Feature Image"
-                        className="w-8 h-8"
-                        width={24}
-                        height={24}
-                      />
-                    </div>
-                    <p className="max-w-sm mx-auto">{feature.description}</p>
+          <div className="max-w-2xl mx-auto mb-16">
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2, delay: 0.2 }}
+              className="font-semibold text-4xl sm:text-4xl lg:text-5xl text-center mb-4 capitalize"
+            >
+              Your analytics in one place
+            </motion.h2>
+            <p className="text-center text-lg">
+              Still juggling tools? EP365 unifies your procurement in one
+              platform.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16">
+            {featureData.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div
+                  className="flex flex-col justify-center items-start gap-6"
+                  key={index}
+                >
+                  <div className="bg-white rounded-lg p-2.5 shadow-2xl">
+                    <Icon className="w-5 h-5 text-[#44BCFF]" />
                   </div>
-                );
-              })}
-            </div>
+
+                  <h1 className="text-xl sm:text-2xl font-semibold">
+                    {feature.title}
+                  </h1>
+                  <p className="max-w-sm">{feature.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

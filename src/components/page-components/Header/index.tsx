@@ -39,9 +39,9 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <NavbarButton
             variant="primary"
-            className="rounded-full  bg-primary/50 text-white shadow-none text-[13px]"
+            className="rounded-full bg-black text-white shadow-none text-[13px]"
           >
-            Get A Free Quote
+            Book a demo
           </NavbarButton>
         </div>
       </NavBody>
@@ -75,7 +75,7 @@ const Header = () => {
               variant="primary"
               className="w-full"
             >
-              Get A Free Quote
+              Book a demo
             </NavbarButton>
           </div>
         </MobileNavMenu>

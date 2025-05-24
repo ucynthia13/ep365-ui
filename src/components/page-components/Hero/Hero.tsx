@@ -1,58 +1,51 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
-import React from "react";
-import { ShieldCheck } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Sparkles } from "lucide-react";
 import Image from "next/image";
 
 const Hero = () => {
-  return (
-    <section
-      id="home"
-      className="relative z-10 overflow-hidden bg-gradient-to-b from-[#27665D] to-[#3A3A3A] pt-[130px] pb-24 md:pt-[120px] md:pb-[32px] xl:pt-[140px] xl:pb-[60px] 2xl:pt-[160px] 2xl:pb-[80px]"
-    >
-      <div className="flex flex-col container max-w-7xl mx-auto gap-8">
-        <div className="flex flex-col justify-center items-center container max-w-6xl mx-auto gap-7">
-          <Badge className="bg-blue-50 text-black flex gap-1 rounded-full px-4 py-1.5">
-            <ShieldCheck className="w-6 h-6 text-blue-400" />
-            SOC 2 Compliant
-          </Badge>
-          <h1 className="font-bold text-5xl text-primary-foreground max-w-xl text-center mx-auto leading-snug">
-            The Smarter Way to Manage Procurement
-          </h1>
-          <p className="text-primary-foreground max-w-3xl mx-auto text-center text-lg">
-            EP365 simplifies your procurement process with powerful automation,
-            real-time insights, and AI-driven supplier management — all in one
-            user-friendly platform.
-          </p>
-          <Button className="bg-[#52a699] rounded-full px-8 py-6 font-medium text-sm">
-            Book a Demo
-          </Button>
-        </div>
-        <div className="flex justify-center items-center mt-6">
-          <Image
-            src="/images/hero/Picture → Precoro dashboard screen (3).svg"
-            alt="Hero Image 1"
-            width={400}
-            height={400}
-            className="translate-x-1/2 -translate-y-1/8"
-          />
+  return ( 
+    <div className="bg-gray-50">
+      <section className="relative bg-gray-50 sm:pt-16 overflow-hidden pt-[130px] md:pt-[120px] xl:pt-[140px] 2xl:pt-[160px]">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <Badge className="rounded-full bg-gradient-to-r from-[#44BCFF]/10 via-[#44BCFF]/10 to-[#44BCFF]/5 border border-[#44BCFF]/30 px-4 py-1.5 text-[#44BCFF]/60">
+              Get started with demo
+              <Sparkles />
+            </Badge>
+            <p className="mt-5 text-3xl font-bold leading-tight text-black capitalize sm:leading-tight sm:text-4xl lg:text-6xl lg:leading-tight font-pj">
+              The smarter way to manage
+              <span className="relative inline-flex sm:inline">
+                <span className="bg-gradient-to-r from-[#44BCFF] via-[#44BCFF]/60 to-[#44BCFF]/70 blur-lg filter opacity-30 w-full h-full absolute inset-0"></span>
+                <span className="relative"> Procurement </span>
+              </span>
+            </p>
 
-          <Image
-            src="/images/hero/Picture → Precoro dashboard screen (1).svg"
-            alt="Hero Image 1"
-            width={700}
-            height={700}
-          />
-          <Image
-            src="/images/hero/Picture → Precoro dashboard screen (2).svg"
-            alt="Hero Image 1"
-            width={400}
-            height={400}
-            className="-translate-x-1/2 translate-y-1/10"
-          />
+            <div className="px-8 sm:items-center sm:justify-center sm:px-0 sm:space-x-5 sm:flex mt-9">
+              <a
+                href="#"
+                className="inline-flex items-center justify-center w-full px-8 py-3 text-lg font-semibold text-white transition-all duration-2 border-2 border-transparent sm:w-auto rounded-full font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 bg-black hover:bg-gray-900"
+              >
+                Book a demo
+              </a>
+            </div>
+          </div>
+          <div className="relative h-[400px] overflow-hidden">
+            <div className="absolute inset-0 h-2/3 bg-gray-50 z-0"></div>
+            <div className="relative z-10 mx-auto lg:max-w-7xl rounded-xl overflow-clip">
+              <Image
+                className="w-full h-auto"
+                src="/images/hero/Picture → Precoro dashboard screen (1).svg"
+                alt=""
+                width={1200}
+                height={800}
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

@@ -1,26 +1,41 @@
+import {
+  PieChart,
+  CalendarCheck,
+  Truck,
+  Store,
+  Bot,
+  ShieldAlert
+} from 'lucide-react';
+
 export const featureData = [
   {
-    image: "/images/features/SVG (1).svg",
-    description: "Keep track of spending and staywithin the budget",
+    icon: PieChart,
+    title: "Budget Control",
+    description: "Monitor expenses in real time and ensure you stay on budget with full visibility into spend.",
   },
   {
-    image: "/images/features/SVG (2).svg",
-    description: "Keep track of spending and staywithin the budget",
+    icon: CalendarCheck,
+    title: "Month-End Close",
+    description: "Simplify and speed up your financial close process with seamless data consolidation.",
   },
   {
-    image: "/images/features/SVG (3).svg",
-    description: "Keep track of spending and staywithin the budget",
+    icon: Truck,
+    title: "Faster Approvals",
+    description: "Get items delivered on time thanks to quick, automated purchase approvals.",
   },
   {
-    image: "/images/features/SVG (4).svg",
-    description: "Keep track of spending and staywithin the budget",
+    icon: Store,
+    title: "Supplier Collaboration",
+    description: "Strengthen vendor relationships and streamline communication all in one place.",
   },
   {
-    image: "/images/features/SVG (5).svg",
-    description: "Keep track of spending and staywithin the budget",
+    icon: Bot,
+    title: "AI-Powered OCR",
+    description: "Automate data entry and save 5+ hours a week with intelligent invoice scanning.",
   },
   {
-    image: "/images/features/SVG (6).svg",
-    description: "Keep track of spending and staywithin the budget",
+    icon: ShieldAlert,
+    title: "Error & Fraud Prevention",
+    description: "Minimize human error and detect potential fraud with built-in safeguards and alerts.",
   },
 ];

@@ -6,12 +6,12 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <section id="banner" className="relative z-10 overflow-hidden px-6">
+    <section id="banner" className="relative z-10 px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="relative overflow-hidden max-w-5xl my-12 mx-auto rounded-2xl bg-[#333333] p-12 md:p-14 lg:p-16 flex justify-between"
+        className="relative overflow-hidden max-w-6xl my-12 mx-auto rounded-2xl bg-gray-950 p-12 md:p-14 lg:p-16 flex justify-between"
       >
         <div className="absolute inset-0 pointer-events-none z-0">
           <Image
@@ -43,16 +43,16 @@ const Banner = () => {
             className="absolute bottom-0 left-0 h-14 w-auto opacity-80"
           />
         </div>
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full">
-          <div className="text-white flex flex-col gap-1 md:max-w-[60%]">
-            <h1 className="text-3xl font-semibold">
+        <div className="flex flex-col justify-center items-center w-full">
+          <div className="text-white text-center flex flex-col gap-3 md:max-w-[60%]">
+            <h1 className="text-4xl font-semibold mb-2">
               See what EP365 has for you!
             </h1>
-            <p>Start your spend visibility now</p>
+            <p className="text-lg">We are here to help you with your business. Get in touch with us and we will get back to you as soon as possible.</p>
           </div>
-          <div className="mt-4 md:mt-0">
-            <Button className="bg-primary px-6 py-3 text-md">
-              Get my demo
+          <div className="mt-6">
+            <Button className="bg-gray-800 hover:bg-gray-900 px-12 py-6 text-md rounded-full">
+              Contact Us
             </Button>
           </div>
         </div>
