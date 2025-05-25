@@ -32,19 +32,26 @@ const Features = () => {
             {featureData.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <div
-                  className="flex flex-col justify-center items-start gap-6"
+                <motion.div
                   key={index}
+                  className="flex flex-col justify-center items-start gap-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.15,
+                    ease: "easeOut",
+                  }}
+                  viewport={{ once: true }}
                 >
                   <div className="bg-white rounded-lg p-2.5 shadow-2xl">
                     <Icon className="w-5 h-5 text-[#44BCFF]" />
                   </div>
-
                   <h1 className="text-xl sm:text-2xl font-semibold">
                     {feature.title}
                   </h1>
                   <p className="max-w-sm">{feature.description}</p>
-                </div>
+                </motion.div>
               );
             })}
           </div>

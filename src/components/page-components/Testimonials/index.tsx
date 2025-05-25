@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { testimonials } from "./testimonialsData";
 import { motion } from "framer-motion";
@@ -34,8 +34,12 @@ const Testimonials = () => {
           <div className="relative mt-10 md:mt-16 md:order-2">
             <div className="relative grid max-w-l grid-cols-1 sm:grid-cols-2 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
               {testimonials.map((testimonial, idx) => (
-                <div
+                <motion.div
                   key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: idx * 0.15 }}
+                  viewport={{ once: true }}
                   className="flex flex-col overflow-hidden shadow-sm rounded-xl"
                 >
                   <div className="flex flex-col justify-between flex-1 p-6 lg:py-8 lg:px-7">
@@ -79,7 +83,7 @@ const Testimonials = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
