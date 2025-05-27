@@ -28,7 +28,9 @@ const IndustrySections = ()=> {
 export default IndustrySections
 
 const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl"
+  style={{ backgroundImage: "/images/hero/Picture → Precoro dashboard screen (1).svg", backgroundSize: "cover", backgroundPosition: "center" }}
+  ></div>
 );
 const items = [
   {

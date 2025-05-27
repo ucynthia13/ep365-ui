@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,27 +10,46 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowRight} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { pricingPlans } from "./pricingsData";
 import { motion } from "framer-motion";
 
 const PricingPlans = () => {
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
+
   return (
     <section className="relative z-10 pt-12 sm:pt-16 lg:pt-20" id="pricing">
       <div className="px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto mb-16">
+        <div className="max-w-2xl mx-auto mb-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: 0.2 }}
-            className="font-semibold text-4xl sm:text-4xl lg:text-5xl text-center mb-4 capitalize"
+            className="font-semibold text-4xl sm:text-4xl lg:text-5xl mb-4 capitalize"
           >
             Our Pricing Plans
           </motion.h2>
-          <p className="text-center text-lg">
-            Choose the plan best for your business growth.
-          </p>
+          <p className="text-lg">Choose the plan best for your business growth.</p>
+
+          {/* Toggle Switcher */}
+          <div className="my-6 inline-flex border border-border rounded-full p-1 bg-card">
+            <Button
+              variant={billingCycle === "monthly" ? "default" : "ghost"}
+              onClick={() => setBillingCycle("monthly")}
+              className="rounded-full px-4 py-2 cursor-pointer"
+            >
+              Monthly
+            </Button>
+            <Button
+              variant={billingCycle === "yearly" ? "default" : "ghost"}
+              onClick={() => setBillingCycle("yearly")}
+              className="rounded-full px-4 py-2 cursor-pointer"
+            >
+              Yearly
+            </Button>
+          </div>
         </div>
+
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <Card
@@ -53,10 +73,12 @@ const PricingPlans = () => {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-end">
-                  <span className="text-4xl font-bold">{plan.price}</span>
+                  <span className="text-4xl font-bold">
+                    {billingCycle === "monthly" ? plan.pricemonthly : plan.priceyearly}
+                  </span>
                   {plan.period && (
                     <span className="text-foreground/70 ml-1">
-                      {plan.period}
+                      {billingCycle === "monthly" ? "/mo" : "/yr"}
                     </span>
                   )}
                 </div>

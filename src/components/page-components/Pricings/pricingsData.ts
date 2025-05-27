@@ -2,7 +2,8 @@ export const pricingPlans = [
   {
     name: "Starter",
     description: "Perfect for small businesses and startups",
-    price: "Free",
+    pricemonthly: "Free",
+    priceyearly: "$29",
     features: [
       "Basic digital presence",
       "Standard templates",
@@ -15,7 +16,8 @@ export const pricingPlans = [
   {
     name: "Pro",
     description: "Ideal for growing businesses",
-    price: "$29",
+    pricemonthly: "$29",
+    priceyearly: "$89",
     period: "/month",
     features: [
       "Advanced digital tools",
@@ -30,7 +32,8 @@ export const pricingPlans = [
   {
     name: "Enterprise",
     description: "For large organizations with complex needs",
-    price: "$99",
+    pricemonthly: "$99",
+    priceyearly: "$119",
     period: "/month",
     features: [
       "Enterprise-grade solutions",

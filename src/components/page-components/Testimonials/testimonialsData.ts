@@ -20,7 +20,7 @@ export const testimonials: Testimonial[] = [
     avatar: "/images/testimonials/Stacks image.svg",
   },
     {
-    quote: "This procurement software made our purchasing process seamless and efficient. It’s so intuitive — managing suppliers and orders has never been easier.",
+    quote: "This procurement software made our purchasing process easier.",
     name: "Leslie Alexander",
     title: "Supply Chain Manager",
     avatar: "/images/testimonials/Stacks image.svg",

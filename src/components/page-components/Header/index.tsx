@@ -41,7 +41,7 @@ const Header = () => {
             variant="primary"
             className="rounded-full bg-black text-white shadow-none text-[13px]"
           >
-            Book a demo
+            Login
           </NavbarButton>
         </div>
       </NavBody>
@@ -75,7 +75,7 @@ const Header = () => {
               variant="primary"
               className="w-full"
             >
-              Book a demo
+              Login
             </NavbarButton>
           </div>
         </MobileNavMenu>

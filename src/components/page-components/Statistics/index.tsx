@@ -1,7 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
+import Counter from "./Counter";
 
 const Statistics = () => {
+  const stats = [
+    { value: "96%", label: "Reduction in requisition time" },
+    { value: "40%", label: "decrease in unapproved vendors" },
+    { value: "$30K", label: "saved in a few weeks" },
+    { value: "90%", label: "approval process efficiency increase" },
+  ];
+
   return (
     <section className="relative z-10 py-12 sm:py-16 lg:py-20">
       <div className="absolute inset-50 z-0">
@@ -24,15 +32,7 @@ const Statistics = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 text-center lg:mt-24 sm:gap-x-12 lg:grid-cols-4">
-          {[
-            { value: "96%", label: "Reduction in requisition time" },
-            { value: "40%", label: "decrease in unapproved vendors" },
-            { value: "$30K", label: "saved in a few weeks" },
-            {
-              value: "90%",
-              label: "approval process efficiency increase",
-            },
-          ].map((stat, index) => (
+          {stats.map((stat, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -40,7 +40,9 @@ const Statistics = () => {
               transition={{ duration: 0.4, delay: index * 0.15 }}
               viewport={{ once: true }}
             >
-              <h3 className="font-bold text-5xl">{stat.value}</h3>
+              <h3 className="font-bold text-5xl">
+                <Counter target={stat.value} />
+              </h3>
               <p className="text-center text-lg">{stat.label}</p>
             </motion.div>
           ))}

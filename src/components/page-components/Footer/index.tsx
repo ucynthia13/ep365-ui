@@ -32,7 +32,7 @@ const defaultSections = [
     links: [
       { name: "Pricing", href: "#" },
       { name: "Features", href: "#" },
-      { name: "Soluions", href: "#" },
+      { name: "Solutions", href: "#" },
       { name: "About EP365", href: "#" },
     ],
   },
@@ -90,7 +90,7 @@ const Footer = ({
 
             <ul className="flex items-center space-x-2 text-muted-foreground">
               {socialLinks.map((social, idx) => (
-                <li key={idx} className="font-medium hover:text-primary">
+                <li key={idx} className="font-medium hover:text-[#44BCFF]/90">
                   <a href={social.href} aria-label={social.label}>
                     {social.icon}
                   </a>
@@ -106,7 +106,7 @@ const Footer = ({
                   {section.links.map((link, linkIdx) => (
                     <li
                       key={linkIdx}
-                      className="font-medium hover:text-primary"
+                      className="font-medium hover:text-[#44BCFF]/90"
                     >
                       <a href={link.href}>{link.name}</a>
                     </li>
@@ -120,7 +120,7 @@ const Footer = ({
           <p className="order-2 lg:order-1">{copyright}</p>
           <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row">
             {legalLinks.map((link, idx) => (
-              <li key={idx} className="hover:text-primary">
+              <li key={idx} className="hover:text-[#44BCFF]/90">
                 <a href={link.href}> {link.name}</a>
               </li>
             ))}
