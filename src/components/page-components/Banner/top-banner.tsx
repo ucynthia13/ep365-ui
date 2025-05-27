@@ -2,7 +2,7 @@ import React from 'react'
 
 const TopBanner = () => {
   return (
-      <div className="bg-gradient-to-r from-transparent to-gray-50 via-[#44BCFF]/10 dark:via-[#44BCFF]/10 dark:to-transparent dark:from-transparent flex gap-2.5 justify-center items-center text-center p-2.5 border w-full text-sm">
+      <div className="z-30 fixed bg-gradient-to-r from-transparent via-[#44BCFF]/10 backdrop-blur-2xl to-white dark:via-[#44BCFF]/10 dark:to-transparent dark:from-transparent flex gap-2.5 justify-center items-center text-center p-2.5 border w-full text-sm">
         Check Out our Complete Guide{" "}
         <a
           href="/download-gude"

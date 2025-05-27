@@ -1,5 +1,5 @@
-
-import Banner from "@/components/page-components/Banner/bottom-banner";
+import TopBanner from "@/components/page-components/Banner/top-banner";
+import ContactUS from "@/components/page-components/Contact";
 import Features from "@/components/page-components/Features";
 import Footer from "@/components/page-components/Footer";
 import Header from "@/components/page-components/Header";
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <TopBanner />
       <Header />
       <Hero />
       <Industries />
@@ -25,7 +26,8 @@ export default function Home() {
       <Statistics />
       <Testimonials />
       <PricingPlans />
-      <Banner />
+      {/* <Banner /> */}
+      <ContactUS />
       <Footer />
     </>
   );

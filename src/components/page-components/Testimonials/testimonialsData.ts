@@ -8,7 +8,7 @@ export const testimonials: Testimonial[] = [
     avatar: "/images/testimonials/Stacks image.svg",
   },
   {
-    quote: "A game-changer for our procurement team. The automation features saved us countless hours and improved accuracy across the board.",
+    quote: "A game-changer for our procurement team. The automation features saved us countless hours",
     name: "Jacob Jones",
     title: "Procurement Specialist",
     avatar: "/images/testimonials/Stacks image.svg",
@@ -33,6 +33,18 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote: "We’ve streamlined our entire procurement workflow with this software. It’s user-friendly, customizable, and the support team is fantastic.",
+    name: "Dianne Russell",
+    title: "Operations Director",
+    avatar: "/images/testimonials/Stacks image.svg",
+  },
+    {
+    quote: "A game-changer for our procurement team. The automation features saved us countless hours and improved accuracy across the board.",
+    name: "Jacob Jones",
+    title: "Procurement Specialist",
+    avatar: "/images/testimonials/Stacks image.svg",
+  },
+  {
+    quote: "We’ve streamlined our entire procurement workflow with this software.",
     name: "Dianne Russell",
     title: "Operations Director",
     avatar: "/images/testimonials/Stacks image.svg",
