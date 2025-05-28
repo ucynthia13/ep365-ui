@@ -12,7 +12,7 @@ const Industries = () => {
       viewport={{ once: false }}
       className="relative z-10 py-12 sm:py-16 lg:py-20 "
     >
-      <div className="flex flex-col max-w-5xl mx-auto">
+      <div className="flex flex-col max-w-5xl mx-auto px-6">
         <div className="flex flex-col justify-center items-center gap-4">
           <div className="max-w-2xl mx-auto text-center">
             <motion.h2

@@ -1,68 +1,109 @@
 import React from "react";
-import {
-  IconArrowWaveRightUp,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import Image from "next/image";
+import { Globe } from "@/components/magicui/globe";
 
-const IndustrySections = ()=> {
+const IndustrySections = () => {
   return (
     <BentoGrid className="max-w-7xl mx-auto">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          icon={item.icon}
-          className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+          className={i === 0 || i === 3 ? "md:col-span-2" : ""}
+          header={
+            i === 0 || i===3 ? (
+              item.header
+            ) : (
+              <div className="flex flex-col h-full justify-between">
+                <div>
+                  <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
+                    {item.title}
+                  </div>
+                  <div className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
+                    {item.description}
+                  </div>
+                </div>
+                {item.header}
+              </div>
+            )
+          }
+          title={i === 0 || i===3 ? item.title : undefined}
+          description={i === 0 || i===3 ? item.description : undefined}
         />
       ))}
     </BentoGrid>
   );
-}
+};
 
-export default IndustrySections
+export default IndustrySections;
 
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl"
-  style={{ backgroundImage: "/images/hero/Picture → Precoro dashboard screen (1).svg", backgroundSize: "cover", backgroundPosition: "center" }}
-  ></div>
+const DualImageSkeleton = () => (
+  <div className="flex flex-col gap-4 w-full h-full">
+    <div className="flex gap-4 w-full h-full">
+      <div className="flex-1 relative min-h-30">
+        <Image
+          src="/images/industries/onboarding-1.svg"
+          fill
+          alt="Onboarding Part 1"
+          className="rounded-md object-contain"
+        />
+      </div>
+      <div className="flex-1 relative min-h-30">
+        <Image
+          src="/images/industries/onboarding-2.svg"
+          fill
+          alt="Onboarding Part 2"
+          className="rounded-md object-contain"
+        />
+      </div>
+    </div>
+  </div>
 );
+
+const BorderedImage = ({ imageUrl }: { imageUrl: string }) => (
+  <div className="w-full p-2 overflow-hidden relative">
+    <div className="flex-1 relative min-h-60">
+      <Image
+        src={imageUrl}
+        fill
+        alt="Onboarding Part 1"
+        className="rounded-md object-contain"
+      />
+    </div>
+  </div>
+);
+
+const SimpleImage = ({ imageUrl }: { imageUrl: string }) => (
+  <div className="w-full h-full relative rounded-md overflow-hidden">
+    <Image src={imageUrl} alt="Industry Image" fill className="object-cover" />
+  </div>
+);
+
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  
-  {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    title: "Effortless Onboarding",
+    description: "Get fully compliant and operational in just a few steps.",
+    header: <DualImageSkeleton />,
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Power of Communication",
+    title: "Real-Time Procurement Tracking",
     description:
-      "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+      "Get live insights into requisitions, approvals, and order statuses.",
+    header: <BorderedImage imageUrl="/images/industries/Dashboard.svg" />,
   },
   {
-    title: "The Pursuit of Knowledge",
-    description: "Join the quest for understanding and enlightenment.",
-    header: <Skeleton />,
-    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
-  }
+    title: "Built for Global Trade",
+    description:
+      "We streamline procurement operations for companies worldwide.",
+    header: (
+      <div className="w-full h-64 relative rounded-md overflow-hidden">
+        <Globe />
+      </div>
+    ),
+  },
+  {
+    title: "Role Assignment",
+    description: "Manage user access through flexible role assignments.",
+    header: <SimpleImage imageUrl="/images/industries/roleassignment.svg" />,
+  },
 ];

@@ -16,7 +16,7 @@ const Statistics = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[#44BCFF]/70 via-transparent to-[#44BCFF]/70 blur-3xl" />
       </div>
 
-      <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-6">
         <div className="max-w-2xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -38,7 +38,7 @@ const Statistics = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.15 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <h3 className="font-bold text-5xl">
                 <Counter target={stat.value} />

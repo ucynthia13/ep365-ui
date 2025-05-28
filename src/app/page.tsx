@@ -21,12 +21,11 @@ export default function Home() {
       <TopBanner />
       <Header />
       <Hero />
-      <Industries />
       <Features />
+      <Industries />
       <Statistics />
       <Testimonials />
       <PricingPlans />
-      {/* <Banner /> */}
       <ContactUS />
       <Footer />
     </>

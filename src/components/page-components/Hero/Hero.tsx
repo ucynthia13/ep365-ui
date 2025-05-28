@@ -1,6 +1,5 @@
 "use client";
 
-import { Particles } from "@/components/magicui/particles";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -9,10 +8,13 @@ import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { people } from "./heroData";
 import Brands from "../Brands";
+import { BorderBeam } from "@/components/magicui/border-beam";
+import { GridPattern } from "@/components/magicui/grid-pattern";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
   const { resolvedTheme } = useTheme();
-  const [color, setColor] = useState("#ffffff");
+  const [, setColor] = useState("#ffffff");
 
   useEffect(() => {
     setColor(resolvedTheme === "dark" ? "#ffffff" : "#000000");
@@ -40,27 +42,36 @@ const Hero = () => {
   ];
   return (
     <div className="bg-gray-50">
-      <section className="relative sm:pt-16 overflow-hidden pt-[130px] md:pt-[120px] xl:pt-[140px] 2xl:pt-[160px]">
-        <Particles
-          className="absolute inset-0 z-0"
-          quantity={110}
-          ease={80}
-          color={color}
-          refresh
-        />
+      <GridPattern
+        squares={[
+          [4, 4],
+          [5, 1],
+          [8, 2],
+          [5, 3],
+          [5, 5],
+          [10, 10],
+          [12, 15],
+          [15, 10],
+          [10, 15],
+          [15, 10],
+          [10, 15],
+          [15, 10],
+        ]}
+        className={cn(
+          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-16"
+        )}
+      />
 
+      <section className="relative sm:pt-16 overflow-hidden pt-[130px] md:pt-[120px] xl:pt-[140px] 2xl:pt-[160px]">
         <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center mt-16">
-            <div className="flex flex-row items-center justify-center mb-10 w-full">
-              <AnimatedTooltip items={people} />
-            </div>{" "}
-            {/* <p className="mt-5 text-3xl font-bold leading-tight text-black capitalize sm:leading-tight sm:text-4xl lg:text-6xl lg:leading-tight font-pj">
-              The smarter way to manage
-              <span className="relative inline-flex sm:inline">
-                <span className="bg-gradient-to-r from-[#44BCFF] via-[#44BCFF]/60 to-[#44BCFF]/70 blur-lg filter opacity-30 w-full h-full absolute inset-0"></span>
-                <span className="relative"> Procurement </span>
-              </span>
-            </p> */}
+            <div className="flex flex-col mb-10">
+              <div className="flex flex-row items-center justify-center w-full">
+                <AnimatedTooltip items={people} />
+              </div>
+              <p className="text-gray-600">Trusted by 200+ people</p>
+            </div>
             <TypewriterEffectSmooth words={words} />
             <motion.p
               initial={{ opacity: 0, y: 10 }}
@@ -88,13 +99,19 @@ const Hero = () => {
               </motion.a>
             </motion.div>
           </div>
-          <Brands />    
+          <Brands />
           <motion.div
-            className="relative h-[500px] max-w-5xl mx-auto overflow-hidden border rounded-t-xl p-2 bg-gray-100"
+            className="relative h-[500px] max-w-5xl mx-auto overflow-hidden border-x border-t rounded-t-xl p-2 bg-gray-100"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
+            <BorderBeam
+              duration={4}
+              size={300}
+              reverse
+              className="from-transparent via-[#44BCFF] to-transparent"
+            />
             <div className="relative z-10 rounded-xl overflow-clip border">
               <Image
                 className="w-full h-auto "

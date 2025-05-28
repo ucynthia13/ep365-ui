@@ -1,61 +1,14 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
-
-interface FooterProps {
-  logo?: {
-    url: string;
-    src: string;
-    alt: string;
-    title: string;
-  };
-  sections?: Array<{
-    title: string;
-    links: Array<{ name: string; href: string }>;
-  }>;
-  description?: string;
-  socialLinks?: Array<{
-    icon: React.ReactElement;
-    href: string;
-    label: string;
-  }>;
-  copyright?: string;
-  legalLinks?: Array<{
-    name: string;
-    href: string;
-  }>;
-}
-
-const defaultSections = [
-  {
-    title: "Platform",
-    links: [
-      { name: "Pricing", href: "#" },
-      { name: "Features", href: "#" },
-      { name: "Solutions", href: "#" },
-      { name: "About EP365", href: "#" },
-    ],
-  },
-  {
-    title: "More",
-    links: [
-      { name: "Contact Us", href: "#" },
-      { name: "FAQs", href: "#" },
-      { name: "Blogs", href: "#" },
-    ],
-  },
-];
+import { FooterProps } from "@/types/footer";
+import { defaultSections, defaultLegalLinks } from "./footerData";
 
 const defaultSocialLinks = [
   { icon: <FaInstagram className="size-5" />, href: "#", label: "Instagram" },
   { icon: <FaFacebook className="size-5" />, href: "#", label: "Facebook" },
   { icon: <FaTwitter className="size-5" />, href: "#", label: "Twitter" },
   { icon: <FaLinkedin className="size-5" />, href: "#", label: "LinkedIn" },
-];
-
-const defaultLegalLinks = [
-  { name: "Terms and Conditions", href: "#" },
-  { name: "Privacy Policy", href: "#" },
 ];
 
 const Footer = ({
@@ -71,8 +24,8 @@ const Footer = ({
   legalLinks = defaultLegalLinks,
 }: FooterProps) => {
   return (
-    <section className="pt-16 px-6 rounded-tl-4xl rounded-tr-4xl border-t bg-white relative z-10">
-      <div className="container mx-auto max-w-7xl">
+    <section className="pt-16 px-6 border-t bg-white relative overflow-hidden mb-6">
+      <div className="relative z-10 container mx-auto max-w-7xl">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
             <div className="flex items-center gap-2 lg:justify-start">
@@ -81,7 +34,7 @@ const Footer = ({
                   src={logo.src}
                   alt={logo.alt}
                   title={logo.title}
-                  // className="h-8" 
+                  // className="h-8"
                   width={100}
                   height={100}
                 />
@@ -98,16 +51,13 @@ const Footer = ({
               ))}
             </ul>
           </div>
-          <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-20">
+          <div className="grid w-full gap-6 sm:grid-cols-2 md:grid-cols-4 lg:gap-20">
             {sections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
-                <h3 className="mb-4 font-bold">{section.title}</h3>
-                <ul className="space-y-3 text-sm text-muted-foreground">
+                <h3 className="mb-4 text-sm font-bold">{section.title}</h3>
+                <ul className="space-y-3 text-sm font-medium text-muted-foreground">
                   {section.links.map((link, linkIdx) => (
-                    <li
-                      key={linkIdx}
-                      className="font-medium hover:text-[#44BCFF]/90"
-                    >
+                    <li key={linkIdx} className="hover:text-[#44BCFF]/90">
                       <a href={link.href}>{link.name}</a>
                     </li>
                   ))}
@@ -131,4 +81,4 @@ const Footer = ({
   );
 };
 
-export default Footer
+export default Footer;

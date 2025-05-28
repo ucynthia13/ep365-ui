@@ -15,7 +15,9 @@ import { pricingPlans } from "./pricingsData";
 import { motion } from "framer-motion";
 
 const PricingPlans = () => {
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
+    "monthly"
+  );
 
   return (
     <section className="relative z-10 pt-12 sm:pt-16 lg:pt-20" id="pricing">
@@ -29,7 +31,9 @@ const PricingPlans = () => {
           >
             Our Pricing Plans
           </motion.h2>
-          <p className="text-lg">Choose the plan best for your business growth.</p>
+          <p className="text-lg">
+            Choose the plan best for your business growth.
+          </p>
 
           {/* Toggle Switcher */}
           <div className="my-6 inline-flex border border-border rounded-full p-1 bg-card">
@@ -74,7 +78,9 @@ const PricingPlans = () => {
               <CardContent className="space-y-6">
                 <div className="flex items-end">
                   <span className="text-4xl font-bold">
-                    {billingCycle === "monthly" ? plan.pricemonthly : plan.priceyearly}
+                    {billingCycle === "monthly"
+                      ? plan.pricemonthly
+                      : plan.priceyearly}
                   </span>
                   {plan.period && (
                     <span className="text-foreground/70 ml-1">
