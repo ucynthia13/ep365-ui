@@ -6,6 +6,7 @@ import { Globe } from "@/components/magicui/globe";
 const IndustrySections = () => {
   return (
     <BentoGrid className="max-w-7xl mx-auto">
+
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -14,7 +15,7 @@ const IndustrySections = () => {
             i === 0 || i===3 ? (
               item.header
             ) : (
-              <div className="flex flex-col h-full justify-between">
+              <div className="flex flex-col h-ful justify-between">
                 <div>
                   <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
                     {item.title}
@@ -96,7 +97,7 @@ const items = [
     description:
       "We streamline procurement operations for companies worldwide.",
     header: (
-      <div className="w-full h-64 relative rounded-md overflow-hidden">
+      <div className="w-full h-55 relative rounded-md overflow-hidden">
         <Globe />
       </div>
     ),

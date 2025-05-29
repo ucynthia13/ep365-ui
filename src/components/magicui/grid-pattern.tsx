@@ -16,8 +16,8 @@ interface GridPatternProps extends React.SVGProps<SVGSVGElement> {
 export function GridPattern({
   width = 40,
   height = 40,
-  x = -1,
-  y = -1,
+  x = 0,
+  y = 0,
   strokeDasharray = "0",
   squares,
   className,
@@ -29,7 +29,7 @@ export function GridPattern({
     <svg
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full fill-[#44BCFF] stroke-gray-200/30",
+        "pointer-events-none absolute inset-0 h-full w-full fill-amber-100 stroke-gray-400/25",
         className,
       )}
       {...props}

@@ -13,6 +13,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { WorldMap } from "@/components/ui/world-map";
 import { BorderBeam } from "@/components/magicui/border-beam";
+import { Card } from "@/components/ui/card";
 
 // Contact schema
 const contactSchema = z.object({
@@ -98,92 +99,93 @@ const ContactUS = () => {
 
         {/* Contact Form */}
         <div className="w-full md:w-1/2 space-y-4">
-          <Form {...contactForm}>
-            <form
-              onSubmit={contactForm.handleSubmit(onContactSubmit)}
-              className="relative space-y-4 max-w-xl border p-8 rounded-xl"
-            >
-              <BorderBeam
-                duration={4}
-                size={300}
-                reverse
-                className="from-transparent via-[#44BCFF]
-                      to-transparent"
-              />
-              <FormField
-                control={contactForm.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <Label htmlFor="name" className="mb-3">
-                      Full Name
-                    </Label>
-                    <FormControl>
-                      <Input id="name" placeholder="Full name" {...field} />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
+          <Card className="relative overflow-hidden">
+            <BorderBeam
+              duration={8}
+              size={300}
+              reverse
+              className="absolute inset-0 z-10 pointer-events-none from-transparent via-[#44BCFF] to-transparent"
+            />
+            <Form {...contactForm}>
+              <form
+                onSubmit={contactForm.handleSubmit(onContactSubmit)}
+                className="space-y-4 max-w-xl p-8 rounded-xl"
+              >
+                <FormField
+                  control={contactForm.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <Label htmlFor="name" className="mb-3">
+                        Full Name
+                      </Label>
+                      <FormControl>
+                        <Input id="name" placeholder="Full name" {...field} />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
 
-              <FormField
-                control={contactForm.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <Label htmlFor="email" className="mb-3">
-                      Email Address
-                    </Label>
-                    <FormControl>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="Email address"
-                        {...field}
-                      />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
+                <FormField
+                  control={contactForm.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <Label htmlFor="email" className="mb-3">
+                        Email Address
+                      </Label>
+                      <FormControl>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="Email address"
+                          {...field}
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
 
-              <FormField
-                control={contactForm.control}
-                name="company"
-                render={({ field }) => (
-                  <FormItem>
-                    <Label htmlFor="company" className="mb-3">
-                      Company
-                    </Label>
-                    <FormControl>
-                      <Input id="company" placeholder="Company" {...field} />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
+                <FormField
+                  control={contactForm.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem>
+                      <Label htmlFor="company" className="mb-3">
+                        Company
+                      </Label>
+                      <FormControl>
+                        <Input id="company" placeholder="Company" {...field} />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
 
-              <FormField
-                control={contactForm.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <Label htmlFor="message" className="mb-3">
-                      Message
-                    </Label>
-                    <FormControl>
-                      <Textarea
-                        id="message"
-                        placeholder="Your message..."
-                        {...field}
-                      />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
+                <FormField
+                  control={contactForm.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <Label htmlFor="message" className="mb-3">
+                        Message
+                      </Label>
+                      <FormControl>
+                        <Textarea
+                          id="message"
+                          placeholder="Your message..."
+                          {...field}
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
 
-              <Button type="submit" className="btn-primary w-full md:w-1/2">
-                Submit
-              </Button>
-            </form>
-          </Form>
+                <Button type="submit" className="btn-primary w-full md:w-1/2">
+                  Submit
+                </Button>
+              </form>
+            </Form>
+          </Card>
         </div>
       </div>
     </section>

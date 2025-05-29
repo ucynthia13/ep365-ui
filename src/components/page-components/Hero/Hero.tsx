@@ -43,23 +43,10 @@ const Hero = () => {
   return (
     <div className="bg-gray-50">
       <GridPattern
-        squares={[
-          [4, 4],
-          [5, 1],
-          [8, 2],
-          [5, 3],
-          [5, 5],
-          [10, 10],
-          [12, 15],
-          [15, 10],
-          [10, 15],
-          [15, 10],
-          [10, 15],
-          [15, 10],
-        ]}
+
         className={cn(
           "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-16"
+          "inset-x-0 inset-y-[-30%] h-[200%]"
         )}
       />
 
@@ -70,7 +57,7 @@ const Hero = () => {
               <div className="flex flex-row items-center justify-center w-full">
                 <AnimatedTooltip items={people} />
               </div>
-              <p className="text-gray-600">Trusted by 200+ people</p>
+              <p className="text-gray-600 mt-2">Trusted by 200+ people</p>
             </div>
             <TypewriterEffectSmooth words={words} />
             <motion.p
@@ -101,7 +88,7 @@ const Hero = () => {
           </div>
           <Brands />
           <motion.div
-            className="relative h-[500px] max-w-5xl mx-auto overflow-hidden border-x border-t rounded-t-xl p-2 bg-gray-100"
+            className="relative md:h-[500px] max-w-5xl mx-auto overflow-hidden border-x border-t rounded-xl md:rounded-t-xl p-2 bg-gray-100"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -114,7 +101,7 @@ const Hero = () => {
             />
             <div className="relative z-10 rounded-xl overflow-clip border">
               <Image
-                className="w-full h-auto "
+                className="w-full h-auto"
                 src="/images/hero/Dashboard.svg"
                 alt="Dashboard Screenshot"
                 width={1200}
