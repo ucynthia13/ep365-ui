@@ -11,6 +11,7 @@ import Brands from "../Brands";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { GridPattern } from "@/components/magicui/grid-pattern";
 import { cn } from "@/lib/utils";
+import { Star } from "lucide-react";
 
 const Hero = () => {
   const { resolvedTheme } = useTheme();
@@ -43,7 +44,6 @@ const Hero = () => {
   return (
     <div className="bg-gray-50">
       <GridPattern
-
         className={cn(
           "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
           "inset-x-0 inset-y-[-30%] h-[200%]"
@@ -54,10 +54,24 @@ const Hero = () => {
         <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center mt-16">
             <div className="flex flex-col mb-10">
-              <div className="flex flex-row items-center justify-center w-full">
-                <AnimatedTooltip items={people} />
+              <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6">
+                <div className="flex flex-row items-center justify-center">
+                  <AnimatedTooltip items={people} />
+                </div>
+                <div className="flex items-center">
+                  {Array(5)
+                    .fill(0)
+                    .map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-5 h-5 text-[#FDB241] fill-[#FDB241]"
+                      />
+                    ))}
+                </div>
               </div>
-              <p className="text-gray-600 mt-2">Trusted by 200+ people</p>
+              <p className="text-gray-600 mt-4 md:mt-2 text-sm">
+                200+ procurement managers trust EP365 daily
+              </p>
             </div>
             <TypewriterEffectSmooth words={words} />
             <motion.p
@@ -67,8 +81,8 @@ const Hero = () => {
               className="mt-5 text-lg max-w-4xl mx-auto font-normal text-gray-600 dark:text-gray-400"
             >
               EP365 simplifies your procurement process with powerful
-              automation, real-time insights, and AI-driven supplier management
-              — all in one user-friendly platform.
+              automation, real-time insights, and AI-driven supplier management,
+              all in one user-friendly platform.
             </motion.p>
             <motion.div
               className="px-8 sm:items-center sm:justify-center sm:px-0 sm:space-x-5 sm:flex mt-9"

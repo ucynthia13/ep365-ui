@@ -1,16 +1,20 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import IndustrySections from "./IndustriesSections";
+'use client';
+
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import FeaturesSection from './FeaturesSection';
+import IndustriesSection from './IndustriesSection';
 
 const Industries = () => {
+  const [activeSection, setActiveSection] = useState<'features' | 'industries'>('features');
+
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false }}
-      className="relative z-10 py-12 sm:py-16 lg:py-20 "
+      className="relative z-10 py-12 sm:py-16 lg:py-20"
     >
       <div className="flex flex-col max-w-5xl mx-auto px-6">
         <div className="flex flex-col justify-center items-center gap-4">
@@ -27,19 +31,34 @@ const Industries = () => {
               One platform to streamline your entire procurement lifecycle, globally and efficiently.
             </p>
           </div>
-          <div className="flex gap-4 mt-16 mb-6">
-            <Button className="bg-black hover:bg-gray-900 border px-6 text-white rounded-full">
+
+          <div className="flex gap-4 mt-12 mb-6">
+            <Button
+              className={`px-6 py-5 rounded-full ${
+                activeSection === 'features'
+                  ? 'bg-black text-white hover:bg-gray-900'
+                  : 'bg-white text-black border border-gray-400'
+              }`}
+              onClick={() => setActiveSection('features')}
+            >
               Features
             </Button>
             <Button
-              variant="outline"
-              className="rounded-full border px-6 border-gray-400"
+              className={`px-6 py-5 rounded-full ${
+                activeSection === 'industries'
+                  ? 'bg-black text-white hover:bg-gray-900'
+                  : 'bg-white text-black border border-gray-400'
+              }`}
+              onClick={() => setActiveSection('industries')}
             >
               Industries
             </Button>
           </div>
         </div>
-        <IndustrySections />
+
+        <div className="mt-8">
+          {activeSection === 'features' ? <FeaturesSection /> : <IndustriesSection />}
+        </div>
       </div>
     </motion.div>
   );

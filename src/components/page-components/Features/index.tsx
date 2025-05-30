@@ -7,13 +7,13 @@ import { cn } from "@/lib/utils";
 const Features = () => {
   return (
     <section
-      id="features"
+      
       className="relative z-10 overflow-hidden py-16 md:py-24 lg:py-32 text-black"
     >
       <div className="absolute -top-20 -right-20 w-90 h-90 bg-white/30 rounded-full blur-[100px]"></div>
       <div className="absolute -bottom-20 -left-20 w-90 h-90 bg-white/30 rounded-full blur-[100px]"></div>
 
-      <div className="flex flex-col container max-w-5xl mx-auto px-6">
+      <div className="flex flex-col container max-w-5xl mx-auto px-6" id="features">
         <div className="flex flex-col justify-center items-center gap-6">
           <div className="max-w-2xl mx-auto mb-16">
             <motion.h2

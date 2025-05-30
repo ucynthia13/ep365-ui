@@ -20,8 +20,8 @@ const PricingPlans = () => {
   );
 
   return (
-    <section className="relative z-10 pt-12 sm:pt-16 lg:pt-20" id="pricing">
-      <div className="px-4 sm:px-6 lg:px-8">
+    <section className="relative z-10 pt-12 sm:pt-16 lg:pt-20">
+      <div className="px-4 sm:px-6 lg:px-8" id="pricing">
         <div className="max-w-2xl mx-auto mb-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -54,7 +54,7 @@ const PricingPlans = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto sm:px-6 lg:px-8">
           {pricingPlans.map((plan, index) => (
             <Card
               key={index}

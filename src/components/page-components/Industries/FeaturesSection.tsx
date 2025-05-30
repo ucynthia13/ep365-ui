@@ -3,9 +3,9 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import Image from "next/image";
 import { Globe } from "@/components/magicui/globe";
 
-const IndustrySections = () => {
+const FeaturesSection = () => {
   return (
-    <BentoGrid className="max-w-7xl mx-auto">
+    <BentoGrid className="max-w-6xl mx-auto">
 
       {items.map((item, i) => (
         <BentoGridItem
@@ -36,7 +36,7 @@ const IndustrySections = () => {
   );
 };
 
-export default IndustrySections;
+export default FeaturesSection;
 
 const DualImageSkeleton = () => (
   <div className="flex flex-col gap-4 w-full h-full">
