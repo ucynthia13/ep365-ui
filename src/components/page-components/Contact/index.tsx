@@ -58,9 +58,7 @@ const ContactUS = () => {
             We are always looking for ways to improve our products and services.
             Contact us and let us know how we can help you.
           </p>
-          <p className="text-gray-600 my-4">
-            contact@yoursaas.ai . +1 (800) 123 XX21 . support@yoursaas.ai
-          </p>
+          <p className="text-gray-600 my-4">info@ep356.com </p>
           <WorldMap
             dots={[
               {
