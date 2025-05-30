@@ -9,8 +9,6 @@ import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { people } from "./heroData";
 import Brands from "../Brands";
 import { BorderBeam } from "@/components/magicui/border-beam";
-import { GridPattern } from "@/components/magicui/grid-pattern";
-import { cn } from "@/lib/utils";
 import { Star } from "lucide-react";
 
 const Hero = () => {
@@ -42,14 +40,31 @@ const Hero = () => {
     },
   ];
   return (
-    <div className="bg-gray-50">
-      <GridPattern
-        className={cn(
-          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[200%]"
-        )}
-      />
-
+    <div className="relative bg-gray-50 overflow-hidden">
+      <div
+        className="absolute inset-0 z-0 flex [mask-image:radial-gradient(circle_at_center,white_0%,white_10%,transparent_70%)] overflow-hidden"
+        style={{ opacity: 1 }}
+      >
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+        <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
+      </div>
       <section className="relative sm:pt-16 overflow-hidden pt-[130px] md:pt-[120px] xl:pt-[140px] 2xl:pt-[160px]">
         <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center mt-16">
@@ -64,7 +79,7 @@ const Hero = () => {
                     .map((_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 ml-1 text-[#FDB241] fill-[#FDB241]"
+                        className="w-5 h-5 text-[#FDB241] fill-[#FDB241]"
                       />
                     ))}
                 </div>

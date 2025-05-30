@@ -41,7 +41,7 @@ const ContactUS = () => {
       
       className="relative z-10 overflow-hidden py-16 md:py-24 lg:py-32 text-black"
     >
-      <div className="flex flex-col md:flex-row gap-8 container max-w-6xl mx-auto sm:px-6 lg:px-8" id="contact">
+      <div className="flex flex-col md:flex-row gap-8 container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" id="contact">
         <div className="flex flex-col w-full md:w-1/2 items-start text-start gap-4">
           <div className="p-4 bg-white rounded-xl shadow mb-4">
             <Mail className="text-[#44BCFF] w-6 h-6" />

@@ -21,7 +21,7 @@ const PricingPlans = () => {
 
   return (
     <section className="relative z-10 pt-12 sm:pt-16 lg:pt-20">
-      <div className="px-4" id="pricing">
+      <div className="px-4 sm:px-6 lg:px-8" id="pricing">
         <div className="max-w-2xl mx-auto mb-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -35,8 +35,7 @@ const PricingPlans = () => {
             Choose the plan best for your business growth.
           </p>
 
-          {/* Toggle Switcher */}
-          <div className="my-6 inline-flex border border-border rounded-full p-1 bg-card">
+          <div className="mt-12 inline-flex border border-border rounded-full p-1 bg-card">
             <Button
               variant={billingCycle === "monthly" ? "default" : "ghost"}
               onClick={() => setBillingCycle("monthly")}
@@ -54,41 +53,19 @@ const PricingPlans = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto sm:px-6 lg:px-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto sm:px-6 lg:px-8">
           {pricingPlans.map((plan, index) => (
             <MagicCard
-              className={`relative border rounded-xl px-2 py-6 ${
-                plan.popular
-                  ? "border-[#44BCFF]/30 shadow-[#44BCFF]/20 -translate-y-4"
-                  : "border-border"
-              }`}
+              className="relative border border-border rounded-xl px-2 py-6 hover:-translate-y-4 transition duration-200"
               key={index}
             >
-              {plan.popular && (
-                <div className="absolute -top-9 left-0 right-0 mx-auto w-fit px-3 py-1 bg-[#44BCFF] text-white text-xs font-medium rounded-full">
-                  MOST POPULAR
-                </div>
-              )}
               <CardHeader>
                 <CardTitle className="text-xl">{plan.name}</CardTitle>
                 <CardDescription className="text-foreground/80 my-4">
                   {plan.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="flex items-end">
-                  <span className="text-4xl font-bold">
-                    {billingCycle === "monthly"
-                      ? plan.pricemonthly
-                      : plan.priceyearly}
-                  </span>
-                  {plan.period && (
-                    <span className="text-foreground/70 ml-1">
-                      {billingCycle === "monthly" ? "/mo" : "/yr"}
-                    </span>
-                  )}
-                </div>
-
+              <CardContent className="space-y-6 mt-4">
                 <div className="space-y-6">
                   {plan.features.map((feature, i) => (
                     <div key={i} className="flex items-start">

@@ -32,7 +32,7 @@ const Industries = () => {
             </p>
           </div>
 
-          <div className="flex gap-4 mt-12 mb-6">
+          <div className="flex gap-4 mt-12">
             <Button
               className={`px-6 py-5 rounded-full ${
                 activeSection === 'features'
