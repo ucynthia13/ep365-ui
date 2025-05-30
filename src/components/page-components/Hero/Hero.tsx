@@ -64,7 +64,7 @@ const Hero = () => {
                     .map((_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 text-[#FDB241] fill-[#FDB241]"
+                        className="w-5 h-5 ml-1 text-[#FDB241] fill-[#FDB241]"
                       />
                     ))}
                 </div>
