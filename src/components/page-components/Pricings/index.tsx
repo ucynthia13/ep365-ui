@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
-  Card,
   CardContent,
   CardDescription,
   CardFooter,
@@ -13,6 +12,7 @@ import {
 import { ArrowRight } from "lucide-react";
 import { pricingPlans } from "./pricingsData";
 import { motion } from "framer-motion";
+import { MagicCard } from "@/components/magicui/magic-card";
 
 const PricingPlans = () => {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
@@ -56,22 +56,22 @@ const PricingPlans = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto sm:px-6 lg:px-8">
           {pricingPlans.map((plan, index) => (
-            <Card
-              key={index}
-              className={`relative border ${
+            <MagicCard
+              className={`relative border rounded-xl px-2 py-6 ${
                 plan.popular
                   ? "border-[#44BCFF]/30 shadow-[#44BCFF]/20 -translate-y-4"
                   : "border-border"
               }`}
+              key={index}
             >
               {plan.popular && (
-                <div className="absolute -top-3 left-0 right-0 mx-auto w-fit px-3 py-1 bg-[#44BCFF] text-white text-xs font-medium rounded-full">
+                <div className="absolute -top-9 left-0 right-0 mx-auto w-fit px-3 py-1 bg-[#44BCFF] text-white text-xs font-medium rounded-full">
                   MOST POPULAR
                 </div>
               )}
               <CardHeader>
-                <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                <CardDescription className="text-foreground/80">
+                <CardTitle className="text-xl">{plan.name}</CardTitle>
+                <CardDescription className="text-foreground/80 my-4">
                   {plan.description}
                 </CardDescription>
               </CardHeader>
@@ -106,7 +106,7 @@ const PricingPlans = () => {
               </CardContent>
               <CardFooter>
                 <Button
-                  className={`w-full cursor-pointer py-2 ${
+                  className={`w-full cursor-pointer py-2 mt-10 ${
                     plan.popular
                       ? "bg-gray-950 hover:bg-black"
                       : "bg-card hover:bg-card/50 border border-border text-black"
@@ -115,7 +115,7 @@ const PricingPlans = () => {
                   {plan.cta}
                 </Button>
               </CardFooter>
-            </Card>
+            </MagicCard>
           ))}
         </div>
       </div>

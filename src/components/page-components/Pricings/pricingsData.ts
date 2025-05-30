@@ -19,7 +19,7 @@ export const pricingPlans = [
     name: "Strategic Sourcing",
     description: "Designed for growing organizations focused on efficiency and compliance",
     pricemonthly: "$10",
-    priceyearly: "$15",
+    priceyearly: "$1",
     period: "/month",
     features: [
       "Unlimited vendors & supplier onboarding",
