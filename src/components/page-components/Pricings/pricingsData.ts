@@ -2,7 +2,7 @@ export const pricingPlans = [
   {
     name: "Essential Procurement",
     description: "Perfect for small teams getting started with digital procurement",
-    pricemonthly: "$85",
+    pricemonthly: "$150",
     priceyearly: "$1000",
     period: "/month",
     features: [
@@ -37,7 +37,7 @@ export const pricingPlans = [
   {
     name: "Enterprise Control",
     description: "For large teams with complex procurement needs and integrations",
-    pricemonthly: "$420",
+    pricemonthly: "$500",
     priceyearly: "$5000",
     period: "/month",
     features: [
