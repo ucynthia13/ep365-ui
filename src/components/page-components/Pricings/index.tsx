@@ -73,7 +73,7 @@ const PricingPlans = () => {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-end my-6">
-                  <span className="text-4xl font-bold">
+                  <span className="text-3xl font-bold">
                     {billingCycle === "monthly"
                       ? plan.pricemonthly
                       : plan.priceyearly}

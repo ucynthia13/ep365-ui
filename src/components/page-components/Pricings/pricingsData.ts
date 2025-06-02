@@ -4,6 +4,7 @@ export const pricingPlans = [
     description: "Perfect for small teams getting started with digital procurement",
     pricemonthly: "$500",
     priceyearly: "$1000",
+    period: "/month",
     features: [
       "Raise and manage purchase requests",
       "Track supplier compliance status",
