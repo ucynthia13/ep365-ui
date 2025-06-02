@@ -17,11 +17,10 @@ export const defaultSections = [
     ],
   },
     {
-    title: "Others",
+    title: "Security",
     links: [
       { name: "Terms & Conditions", href: "#" },
       { name: "Privacy Policy", href: "#" },
-      { name: "Blogs", href: "#" },
     ],
   }
 ];

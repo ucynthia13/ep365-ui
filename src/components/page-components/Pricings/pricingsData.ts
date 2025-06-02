@@ -2,8 +2,8 @@ export const pricingPlans = [
   {
     name: "Essential Procurement",
     description: "Perfect for small teams getting started with digital procurement",
-    pricemonthly: "Custom",
-    priceyearly: "Custom",
+    pricemonthly: "$500",
+    priceyearly: "$1000",
     features: [
       "Raise and manage purchase requests",
       "Track supplier compliance status",
@@ -19,7 +19,7 @@ export const pricingPlans = [
     name: "Strategic Sourcing",
     description: "Designed for growing organizations focused on efficiency and compliance",
     pricemonthly: "$10",
-    priceyearly: "$1",
+    priceyearly: "$2000",
     period: "/month",
     features: [
       "Unlimited vendors & supplier onboarding",
@@ -37,7 +37,7 @@ export const pricingPlans = [
     name: "Enterprise Control",
     description: "For large teams with complex procurement needs and integrations",
     pricemonthly: "$20",
-    priceyearly: "$30",
+    priceyearly: "$5000",
     period: "/month",
     features: [
       "All Strategic features",

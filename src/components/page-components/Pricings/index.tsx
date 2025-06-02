@@ -20,8 +20,8 @@ const PricingPlans = () => {
   );
 
   return (
-    <section className="relative z-10 pt-12 sm:pt-16 lg:pt-20">
-      <div className="px-4 sm:px-6 lg:px-8" id="pricing">
+    <section className="relative z-10 pt-12 sm:pt-16 lg:pt-20" id="pricing">
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto mb-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -35,7 +35,8 @@ const PricingPlans = () => {
             Choose the plan best for your business growth.
           </p>
 
-          <div className="mt-12 inline-flex border border-border rounded-full p-1 bg-card">
+          {/* Toggle Switcher */}
+          <div className="my-6 inline-flex border border-border rounded-full p-1 bg-card">
             <Button
               variant={billingCycle === "monthly" ? "default" : "ghost"}
               onClick={() => setBillingCycle("monthly")}
@@ -53,32 +54,37 @@ const PricingPlans = () => {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <MagicCard
-              className="relative border border-border rounded-xl px-2 py-6 hover:-translate-y-4 transition duration-200"
               key={index}
+              className="relative border border-border p-4 rounded-xl hover:-translate-y-4 transition duration-200 shadow-xs"
             >
+              {plan.popular && (
+                <div className="absolute -top-7 left-0 right-0 mx-auto w-fit px-3 py-1 bg-[#44BCFF] text-white text-xs font-medium rounded-full">
+                  MOST POPULAR
+                </div>
+              )}
               <CardHeader>
-                <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                <CardDescription className="text-foreground/80 mt-4">
+                <CardTitle className="text-2xl my-4">{plan.name}</CardTitle>
+                <CardDescription className="text-foreground/80">
                   {plan.description}
                 </CardDescription>
-                <CardDescription className="text-2xl font-medium text-black my-4">
-                  {billingCycle === "monthly" ? (
-                    <>
-                      {plan.pricemonthly}
-                      <span className="text-sm font-normal">/month</span>
-                    </>
-                  ) : (
-                    <>
-                      {plan.priceyearly}
-                      <span className="text-sm font-normal">/year</span>
-                    </>
-                  )}
-                </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6 mt-4">
+              <CardContent className="space-y-6">
+                <div className="flex items-end my-6">
+                  <span className="text-4xl font-bold">
+                    {billingCycle === "monthly"
+                      ? plan.pricemonthly
+                      : plan.priceyearly}
+                  </span>
+                  {plan.period && (
+                    <span className="text-foreground/70 ml-1">
+                      {billingCycle === "monthly" ? "/month" : "/year"}
+                    </span>
+                  )}
+                </div>
+
                 <div className="space-y-6">
                   {plan.features.map((feature, i) => (
                     <div key={i} className="flex items-start">
@@ -96,10 +102,10 @@ const PricingPlans = () => {
               </CardContent>
               <CardFooter>
                 <Button
-                  className={`w-full cursor-pointer py-2 mt-10 ${
+                  className={`w-full cursor-pointer py-2 my-6 ${
                     plan.popular
-                      ? "bg-gray-950 text-card hover:bg-card hover:text-black hover:border hover:border-border "
-                      : "bg-card border border-border text-black hover:bg-black hover:text-card"
+                      ? "bg-gray-950 hover:bg-black"
+                      : "bg-card hover:bg-card/50 border border-border text-black"
                   }`}
                 >
                   {plan.cta}
