@@ -2,16 +2,16 @@ export const defaultSections = [
   {
     title: "Platform",
     links: [
-      { name: "Pricing", href: "#" },
-      { name: "Features", href: "#" },
-      { name: "Solutions", href: "#" },
+      { name: "Pricing", href: "#pricing" },
+      { name: "Features", href: "#features" },
+      { name: "Solutions", href: "#features" },
       { name: "About EP365", href: "#" },
     ],
   },
   {
     title: "More",
     links: [
-      { name: "Contact Us", href: "#" },
+      { name: "Contact Us", href: "#contact" },
       { name: "FAQs", href: "#" },
       { name: "Blogs", href: "#" },
     ],

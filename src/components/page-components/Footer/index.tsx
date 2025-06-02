@@ -13,7 +13,7 @@ const defaultSocialLinks = [
 
 const Footer = ({
   logo = {
-    url: "ep356.com",
+    url: "ep365.com",
     src: "/images/logos/EP365 Logo.svg",
     alt: "EP365 Logo",
     title: "EP365",

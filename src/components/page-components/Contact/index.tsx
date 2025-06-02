@@ -59,7 +59,7 @@ const ContactUS = () => {
             Contact us and let us know how we can help you.
           </p>
           <p className="text-gray-600 my-4">
-            info@ep356.com . +1 (800) 123 XX21 . support@yoursaas.ai
+            info@ep365.com . +1 (800) 123 XX21 . support@yoursaas.ai
           </p>
           <WorldMap
             dots={[

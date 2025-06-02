@@ -60,9 +60,22 @@ const PricingPlans = () => {
               key={index}
             >
               <CardHeader>
-                <CardTitle className="text-xl">{plan.name}</CardTitle>
-                <CardDescription className="text-foreground/80 my-4">
+                <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                <CardDescription className="text-foreground/80 mt-4">
                   {plan.description}
+                </CardDescription>
+                <CardDescription className="text-2xl font-medium text-black my-4">
+                  {billingCycle === "monthly" ? (
+                    <>
+                      {plan.pricemonthly}
+                      <span className="text-sm font-normal">/month</span>
+                    </>
+                  ) : (
+                    <>
+                      {plan.priceyearly}
+                      <span className="text-sm font-normal">/year</span>
+                    </>
+                  )}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6 mt-4">
@@ -85,8 +98,8 @@ const PricingPlans = () => {
                 <Button
                   className={`w-full cursor-pointer py-2 mt-10 ${
                     plan.popular
-                      ? "bg-gray-950 hover:bg-black"
-                      : "bg-card hover:bg-card/50 border border-border text-black"
+                      ? "bg-gray-950 text-card hover:bg-card hover:text-black hover:border hover:border-border "
+                      : "bg-card border border-border text-black hover:bg-black hover:text-card"
                   }`}
                 >
                   {plan.cta}

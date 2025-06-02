@@ -34,7 +34,7 @@ const Industries = () => {
 
           <div className="flex gap-4 mt-12">
             <Button
-              className={`px-6 py-5 rounded-full ${
+              className={`px-6 py-5 rounded-full cursor-pointer ${
                 activeSection === 'features'
                   ? 'bg-black text-white hover:bg-gray-900'
                   : 'bg-white text-black border border-gray-400'
