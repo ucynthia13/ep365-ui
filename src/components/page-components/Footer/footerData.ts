@@ -4,7 +4,7 @@ export const defaultSections = [
     links: [
       { name: "Pricing", href: "#pricing" },
       { name: "Features", href: "#features" },
-      { name: "Solutions", href: "#features" },
+      { name: "Solutions", href: "#solutions" },
       { name: "About EP365", href: "#" },
     ],
   },

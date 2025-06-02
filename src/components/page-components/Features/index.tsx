@@ -8,7 +8,7 @@ const Features = () => {
   return (
     <section
       
-      className="relative z-10 overflow-hidden py-16 md:py-24 lg:py-32 text-black"
+      className="relative z-10 overflow-hidden pt-16 md:pt-24 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 text-black"
     >
       <div className="absolute -top-20 -right-20 w-90 h-90 bg-white/30 rounded-full blur-[100px]"></div>
       <div className="absolute -bottom-20 -left-20 w-90 h-90 bg-white/30 rounded-full blur-[100px]"></div>
