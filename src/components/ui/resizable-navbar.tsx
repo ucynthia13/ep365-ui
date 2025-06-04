@@ -70,8 +70,8 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <motion.div
       ref={ref}
       className={cn(
-        !visible && "fixed",
-        "inset-x-0 top-12 z-40 w-full max-w-6xl mx-auto",
+        // !visible && "fixed",
+        "fixed inset-x-0 top-12 z-40 w-full max-w-6xl mx-auto",
         className
       )}
     >
