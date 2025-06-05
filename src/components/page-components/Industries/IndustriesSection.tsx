@@ -38,12 +38,12 @@ const IndustriesSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="rounded-lg shadow-xs flex justify-center items-center text-start font-semibold text-white transition duration-200 hover:scale-[1.05] p-6 bg-cover bg-center h-18 bg-gradient-to-b"
+            className="rounded-lg shadow-xs flex justify-center items-center text-start font-semibold text-white transition duration-200 hover:scale-[1.05] p-6 bg-cover bg-center h-18 bg-gradient-to-b cursor-pointer"
             style={{ backgroundImage: `url(${image})` }}
           >
 
             <div className="w-full h-full flex items-center justify-center rounded-lg">
-              <p className="text-sm text-center">{name}</p>
+              <p className="text-sm text-center hover:text-lg transition duration-300">{name}</p>
             </div>
           </motion.div>
         ))}
