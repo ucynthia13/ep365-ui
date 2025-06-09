@@ -5,7 +5,7 @@ import { industries } from "./industriesData";
 
 const IndustriesSection = () => {
   return (
-    <div className="p-10 md:p-12 rounded-2xl border border-border shadow-sm">
+    <div className="p-10 md:p-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="mb-10 lg:col-span-2">
           <h2 className="text-2xl md:text-3xl font-bold text-neutral-900">
