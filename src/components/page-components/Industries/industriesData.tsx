@@ -1,54 +1,47 @@
 import {
-  Smartphone,
-  Apple,
-  Layers,
-  View,
-  BrainCircuit,
-  LayoutDashboard,
-  Wrench,
+  Microscope,
+  Stethoscope,
+  Cpu,
+  Hammer,
+  HelpingHand,
+  BookOpenCheck,
 } from "lucide-react";
 
 export const industries = [
   {
-    title: "Android App Development",
+    title: "Biotechnology",
     description:
-      "Crafting robust, high-performance apps optimized for Android’s diverse ecosystem.",
-    icon: <Smartphone className="w-6 h-6 text-green-500" />,
+      "Ensure compliant procurement of research materials, lab equipment, and clinical supplies.",
+    icon: <Microscope className="w-6 h-6 text-purple-600" />,
   },
   {
-    title: "iOS App Development",
+    title: "Healthcare",
     description:
-      "High-quality Swift & Objective-C apps fully integrated with iOS devices.",
-    icon: <Apple className="w-6 h-6 text-blue-500" />,
+      "Streamline ordering of medical supplies, pharmaceuticals, and hospital equipment.",
+    icon: <Stethoscope className="w-6 h-6 text-red-500" />,
   },
   {
-    title: "Cross-Platform App Development",
+    title: "Technology",
     description:
-      "Build apps with Flutter & React Native using a single codebase for both platforms.",
-    icon: <Layers className="w-6 h-6 text-purple-500" />,
+      "Manage hardware, software, and IT services purchasing with ease and transparency.",
+    icon: <Cpu className="w-6 h-6 text-blue-600" />,
   },
   {
-    title: "AR/VR App Development",
+    title: "Construction",
     description:
-      "Immersive AR/VR apps that enhance user experience across gaming and education.",
-    icon: <View className="w-6 h-6 text-pink-500" />,
+      "Track procurement of building materials, tools, and safety gear across job sites.",
+    icon: <Hammer className="w-6 h-6 text-amber-700" />,
   },
   {
-    title: "AI App Development",
+    title: "Non-profit",
     description:
-      "Leverage AI, NLP, and analytics for smart, adaptive, and personalized app experiences.",
-    icon: <BrainCircuit className="w-6 h-6 text-indigo-500" />,
+      "Maintain budget-friendly purchasing while ensuring accountability for donor-funded items.",
+    icon: <HelpingHand className="w-6 h-6 text-teal-500" />,
   },
   {
-    title: "UI/UX Design",
+    title: "Education",
     description:
-      "Engaging, user-centered interfaces crafted through research and iterative design.",
-    icon: <LayoutDashboard className="w-6 h-6 text-orange-500" />,
-  },
-  {
-    title: "App Testing & Maintenance",
-    description:
-      "Ongoing support, bug fixes, optimizations, and performance testing to keep apps secure.",
-    icon: <Wrench className="w-6 h-6 text-teal-500" />,
-  },
+      "Centralize procurement for classroom supplies, lab gear, and administrative needs.",
+    icon: <BookOpenCheck className="w-6 h-6 text-indigo-500" />,
+  }
 ];
