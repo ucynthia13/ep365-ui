@@ -120,7 +120,7 @@ const Hero = () => {
             <div className="relative z-10 rounded-xl overflow-clip border">
               <Image
                 className="w-full h-auto"
-                src="/images/hero/Dashboard.svg"
+                src="/images/featuresPage/Picture → Purchase Order Screen.svg"
                 alt="Dashboard Screenshot"
                 width={1200}
                 height={800}
