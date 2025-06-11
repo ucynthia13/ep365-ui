@@ -54,3 +54,9 @@ export type ServiceContent = {
 export type ServiceImage = {
     images: string[];
 }
+
+
+export type Features = {
+  icon: string;
+  title: string;
+}

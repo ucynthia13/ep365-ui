@@ -13,6 +13,11 @@ import {
 } from "./components/ServiceSection/serviceSectionData";
 import PRFlow from "./components/PRFlow/PRFlow";
 import POManagement from "./components/POManagement/POManagement";
+import Features from "./components/Features/Features";
+import AboutUs from "./components/AboutUs/AboutUs";
+import WhyUs from "./WhyUs/WhyUs";
+import Partners from "./Partners/Partners";
+import ContactUs from "./components/ContactUs";
 
 export const metadata = {
   title: "Features | EP 365",
@@ -57,6 +62,11 @@ to approve in seconds."
         tabs={controlTabs}
         content={controlContent}
       />
+      <Features />
+      <AboutUs />
+      <WhyUs />
+      <Partners />
+      <ContactUs />
     </>
   );
 };

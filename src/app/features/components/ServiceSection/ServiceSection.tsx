@@ -26,7 +26,8 @@ const Service = ({
   const currentContent = content.find((c) => c.label === activeTab);
 
   return (
-    <section className="relative z-10 overflow-hidden pt-16 md:pt-24 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 text-black">
+    <section className="relative z-10 pt-12 sm:pt-16 lg:pt-28 text-black">
+
       <div className="max-w-6xl px-6 mx-auto">
         <div className="mb-10">
           <p className="text-xs uppercase font-semibold tracking-wider text-gray-500">

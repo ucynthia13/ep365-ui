@@ -6,7 +6,7 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 
 const Hero = () => {
   return (
-    <div className="relative bg-[#f4f4fd] overflow-hidden">
+    <div className="relative bg-[#EEF0F5]/50 overflow-hidden">
       <section className="relative sm:pt-16 overflow-hidden pt-[130px] md:pt-[120px] xl:pt-[140px] 2xl:pt-[160px]">
         <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center mt-16">
@@ -48,7 +48,7 @@ const Hero = () => {
                 href="#"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center w-full px-8 py-2 text-lg font-semibold text-white transition-all duration-2 border-2 border-transparent sm:w-auto rounded-full font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 bg-black hover:text-black hover:bg-gray-50 hover:border-black"
+                className="inline-flex items-center justify-center w-full px-8 py-2 text-lg font-semibold text-white transition-all duration-2 border-2 border-transparent sm:w-auto rounded-full font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-blue-500 hover:text-blue-500 hover:bg-gray-50 hover:border-blue-500"
               >
                 Book a demo
               </motion.a>

@@ -3,7 +3,7 @@ import { features } from "./POManagementData";
 import Image from "next/image";
 const POManagement = () => {
   return (
-    <section className="relative z-10 overflow-hidden pt-16 md:pt-24 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 text-black">
+    <section className="relative z-10 pt-12 sm:pt-16 lg:pt-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
           <p className="text-sm font-semibold text-gray-500 uppercase">
@@ -43,7 +43,7 @@ const POManagement = () => {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full shadow">
+          <button className="bg-blue-600 hover:bg-blue-700 transition text-white px-6 py-3 rounded-full shadow font-medium">
             Book a Demo
           </button>
         </div>

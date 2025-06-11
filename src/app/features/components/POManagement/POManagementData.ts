@@ -10,7 +10,7 @@ export const features = [
     title: "Smart Spend Control",
     description:
       "Prevent overspending with automated budget checks and alerts built into the PO system. Non-compliant orders are stopped before approval.",
-    bg: "bg-white",
+    bg: "bg-[#EEF0F5]/50",
     imageSrc: "/images/featuresPage/desktop_recurring_po_6a280f54bc.webp.svg"
   },
   {
@@ -24,14 +24,14 @@ export const features = [
     title: "Effortless PO Filtering for Faster Access",
     description:
       "Quickly access specific purchase orders by filtering them by status, type, location, or supplier—all within our powerful PO management dashboard.",
-    bg: "bg-white",
+    bg: "bg-[#EEF0F5]/50",
     imageSrc: "/images/featuresPage/thumbnail_icon_2_d41630d2e0.webp.svg"
   },
   {
     title: "Easily create recurring or long-term POs.",
     description:
       "Automate recurring purchases by setting up a simple blanket PO for frequently needed goods and services — reducing manual tasks and saving time.",
-    bg: "bg-white",
+    bg: "bg-[#EEF0F5]/50",
     imageSrc: "/images/featuresPage/laptop_approvals_fe7d4e8cd2.webp.svg"
   },
   {
@@ -45,7 +45,7 @@ export const features = [
     title: "Effortless Matching for PO, Receipt & Invoice",
     description:
       "EP365 ensures seamless matching of purchase orders, receipts, and invoices, alerting users instantly to any discrepancies.",
-    bg: "bg-white",
+    bg: "bg-[#EEF0F5]/50",
     imageSrc: "/images/featuresPage/desktop_filters_df0b9ed990.webp.svg"
   },
   {
