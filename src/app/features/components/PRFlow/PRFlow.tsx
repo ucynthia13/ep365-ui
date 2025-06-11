@@ -48,7 +48,7 @@ const PRFlow = () => {
               />
             </div>
 
-            <div className="bg-[#e8ebfd] p-6 rounded-xl">
+            <div className="bg-[#44BCFF]/5 p-6 rounded-xl">
               <ul className="space-y-3">
                 {prFlowSteps.map((step) => (
                   <li key={step.label}>
@@ -56,8 +56,8 @@ const PRFlow = () => {
                       onClick={() => setActiveStep(step.label)}
                       className={`w-full flex justify-start gap-3 items-start text-left px-4 py-3 rounded-md border transition-all font-medium text-sm ${
                         activeStep === step.label
-                          ? "bg-white text-indigo-600 border-indigo-500 shadow"
-                          : "bg-white/40 text-gray-800 border-transparent hover:bg-white"
+                          ? "bg-white text-[#44BCFF] border-[#44BCFF] shadow"
+                          : "bg-white text-gray-800 border-transparent hover:bg-white"
                       }`}
                     >
                       <ChevronLeft className="w-5 h-5" />

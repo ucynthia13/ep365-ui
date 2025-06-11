@@ -17,7 +17,7 @@ import Features from "./components/Features/Features";
 import AboutUs from "./components/AboutUs/AboutUs";
 import WhyUs from "./WhyUs/WhyUs";
 import Partners from "./Partners/Partners";
-import ContactUs from "./components/ContactUs";
+import ContactUS from "@/components/page-components/Contact";
 
 export const metadata = {
   title: "Features | EP 365",
@@ -66,7 +66,7 @@ to approve in seconds."
       <AboutUs />
       <WhyUs />
       <Partners />
-      <ContactUs />
+      <ContactUS />
     </>
   );
 };

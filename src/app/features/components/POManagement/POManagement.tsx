@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { features } from "./POManagementData";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 const POManagement = () => {
   return (
     <section className="relative z-10 pt-12 sm:pt-16 lg:pt-28">
@@ -43,9 +44,11 @@ const POManagement = () => {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <button className="bg-blue-600 hover:bg-blue-700 transition text-white px-6 py-3 rounded-full shadow font-medium">
+          <Button
+                className="inline-flex items-center justify-center w-full px-7 py-5 text-lg font-semibold text-white transition-all duration-2 border-2 border-transparent sm:w-auto rounded-full font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 bg-black hover:text-black hover:bg-gray-50 hover:border-black"
+          >
             Book a Demo
-          </button>
+          </Button>
         </div>
       </div>
     </section>

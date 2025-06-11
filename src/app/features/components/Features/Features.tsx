@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { features } from "./featuresData";
 import Image from "next/image";
 
@@ -8,14 +9,13 @@ const Features = () => {
         <h3 className="text-sm font-medium text-gray-500 uppercase">
           outstanding perks
         </h3>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2">
+        <h2 className="max-w-xl mx-auto text-2xl md:text-3xl font-bold text-gray-900 mt-2">
           Curious why companies choose EP365
-          <br />
           as their Procurement software?
         </h2>
-        <button className="mt-6 px-6 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition">
+        <Button className="mt-6 inline-flex items-center justify-center w-full px-7 py-5 text-lg font-semibold text-white transition-all duration-2 border-2 border-transparent sm:w-auto rounded-full font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 bg-black hover:text-black hover:bg-gray-50 hover:border-black">
           Book a Demo
-        </button>
+        </Button>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto mt-10">
           {features.map((feature, idx) => (
@@ -23,13 +23,10 @@ const Features = () => {
               key={idx}
               className="flex items-center p-4 bg-white rounded-lg shadow-xs gap-3"
             >
-              <Image
-                src={feature.icon}
-                alt="Feature"
-                width={24}
-                height={24}
-              />
-              <span className="text-gray-800 text-base font-medium">{feature.title}</span>
+              <Image src={feature.icon} alt="Feature" width={24} height={24} />
+              <span className="text-gray-800 text-base font-medium">
+                {feature.title}
+              </span>
             </div>
           ))}
         </div>

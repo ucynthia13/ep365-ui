@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
+import Slider from "./Slider";
 
 const ContactUs = () => {
   const [form, setForm] = useState({
@@ -85,19 +85,13 @@ const ContactUs = () => {
           </p>
         </div>
 
-        <div className="text-center md:text-left">
+        <div className="text-left">
           <p className="text-sm font-semibold text-gray-800 mb-6">
             Want to see EP365 in action? Easy.
             Here’s how:
           </p>
 
-          <Image
-            src="/images/featuresPage/lottie-player.svg"
-            alt="Lottie"
-            width={100}
-            height={100}
-            className="w-80"
-          />
+          <Slider />
         </div>
       </div>
     </section>
