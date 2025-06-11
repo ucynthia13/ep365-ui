@@ -3,8 +3,8 @@
 import Image from "next/image";
 import brandsData from "./brandsData";
 import { motion } from "framer-motion";
-import { Brand } from "@/types/brand";
 import { Marquee } from "@/components/magicui/marquee";
+import { Brand } from "@/types";
 
 const Brands = () => {
   return (

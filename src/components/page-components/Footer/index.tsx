@@ -1,8 +1,8 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
-import { FooterProps } from "@/types/footer";
 import { defaultSections, defaultLegalLinks } from "./footerData";
+import { FooterProps } from "@/types";
 
 const defaultSocialLinks = [
   { icon: <FaInstagram className="size-5" />, href: "#", label: "Instagram" },
