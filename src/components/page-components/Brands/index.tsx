@@ -25,7 +25,7 @@ const Brands = () => {
               Trusted by leading businesses
             </motion.h2>
           </div>
-        <BrandsScrollable />
+        <BrandsScrollable data={brandsData} />
       </motion.div>
     </section>
   );
@@ -48,19 +48,19 @@ const BrandCard = ({ brand }: { brand: Brand }) => {
           src={image}
           alt="Brand"
           className="block"
-          width={160}
-          height={160}
+          width={120}
+          height={120}
         />
       </a>
     </figure>
   );
 };
 
-export const BrandsScrollable = () => {
+export const BrandsScrollable = ({ data }: { data: Brand[] }) => {
   return (
     <div className="relative container max-w-5xl mx-auto flex w-full flex-col items-center justify-center overflow-hidden px-8">
       <Marquee pauseOnHover className="[--duration:27s]">
-        {brandsData.map((brand) => (
+        {data.map((brand) => (
           <BrandCard key={brand.id} brand={brand} />
         ))}
       </Marquee>
