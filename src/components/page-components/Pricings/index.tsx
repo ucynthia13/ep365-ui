@@ -11,8 +11,9 @@ import {
 } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { pricingPlans } from "./pricingsData";
-import { motion } from "framer-motion";
 import { MagicCard } from "@/components/magicui/magic-card";
+import Section from "../common/Section";
+import SectionTitle from "../common/SectionTitle";
 
 const PricingPlans = () => {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
@@ -20,22 +21,13 @@ const PricingPlans = () => {
   );
 
   return (
-    <section className="relative z-10 pt-12 sm:pt-16 lg:pt-20" id="pricing">
-      <div className="px-4 sm:px-6 lg:px-8">
+    <Section id="pricing">
         <div className="max-w-2xl mx-auto mb-8 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: 0.2 }}
-            className="font-semibold text-4xl sm:text-4xl lg:text-5xl mb-4 capitalize"
-          >
-            Our Pricing Plans
-          </motion.h2>
-          <p className="text-lg">
+          <SectionTitle title="Our Pricing Plans" className="mb-4" />
+          <p className="text-base">
             Choose the plan best for your business growth.
           </p>
 
-          {/* Toggle Switcher */}
           <div className="my-6 inline-flex border border-border rounded-full p-1 bg-card">
             <Button
               variant={billingCycle === "monthly" ? "default" : "ghost"}
@@ -54,7 +46,7 @@ const PricingPlans = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8">
           {pricingPlans.map((plan, index) => (
             <MagicCard
               key={index}
@@ -114,8 +106,7 @@ const PricingPlans = () => {
             </MagicCard>
           ))}
         </div>
-      </div>
-    </section>
+    </Section>
   );
 };
 

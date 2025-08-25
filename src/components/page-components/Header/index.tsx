@@ -24,12 +24,8 @@ const Header = () => {
       link: "/features",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
-    },
-    {
-      name: "Contact",
-      link: "#contact",
+      name: "Solutions",
+      link: "/solutions",
     },
   ];
 

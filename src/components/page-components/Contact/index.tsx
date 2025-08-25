@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,6 +13,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { WorldMap } from "@/components/ui/world-map";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { Card } from "@/components/ui/card";
+import Section from "../common/Section";
+import SectionTitle from "../common/SectionTitle";
 
 // Contact schema
 const contactSchema = z.object({
@@ -37,23 +38,13 @@ const ContactUS = () => {
   });
 
   return (
-    <section
-      
-      className="relative z-10 overflow-hidden py-16 md:py-24 lg:py-32 text-black"
-    >
-      <div className="flex flex-col md:flex-row gap-8 container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" id="contact">
+    <Section id="contact" className="pb-28">
+      <div className="flex flex-col md:flex-row gap-8">
         <div className="flex flex-col w-full md:w-1/2 items-start text-start gap-4">
           <div className="p-4 bg-white rounded-xl shadow mb-4">
             <Mail className="text-[#44BCFF] w-6 h-6" />
           </div>
-          <motion.h2
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: 0.2 }}
-            className="font-semibold text-4xl sm:text-4xl lg:text-5xl text-center mb-4 capitalize"
-          >
-            Contact Us
-          </motion.h2>
+          <SectionTitle title="Contact Us" className="mb-4" />
           <p>
             We are always looking for ways to improve our products and services.
             Contact us and let us know how we can help you.
@@ -188,7 +179,7 @@ const ContactUS = () => {
           </Card>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

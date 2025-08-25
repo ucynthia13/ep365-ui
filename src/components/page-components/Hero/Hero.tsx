@@ -66,7 +66,7 @@ const Hero = () => {
         <div className="h-full min-w-20 max-w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-300)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]"></div>
       </div>
       <section className="relative sm:pt-16 overflow-hidden pt-[130px] md:pt-[120px] xl:pt-[140px] 2xl:pt-[160px]">
-        <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center mt-16">
             <div className="flex flex-col mb-10">
               <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6">
@@ -84,7 +84,7 @@ const Hero = () => {
                     ))}
                 </div>
               </div>
-              <p className="text-gray-600 mt-4 md:mt-2 text-sm">
+              <p className="text-gray-600 font-medium mt-4 md:mt-2 text-sm">
                 200+ procurement managers trust EP365 daily
               </p>
             </div>
@@ -117,7 +117,7 @@ const Hero = () => {
           </div>
           <Brands />
           <motion.div
-            className="relative md:h-[500px] max-w-5xl mx-auto overflow-hidden border-x border-t rounded-xl md:rounded-t-xl p-2 bg-gray-100"
+            className="relative md:h-[500px] overflow-hidden border-x border-t rounded-xl md:rounded-t-xl p-2 bg-gray-100"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}

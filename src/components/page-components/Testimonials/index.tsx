@@ -3,33 +3,30 @@ import Image from "next/image";
 import { testimonials } from "./testimonialsData";
 import { motion } from "framer-motion";
 import { FaQuoteLeft } from "react-icons/fa";
+import Section from "../common/Section";
+import SectionTitle from "../common/SectionTitle";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const Testimonials = () => {
   return (
-    <section className="relative z-10 py-12 sm:py-16 lg:py-20">
-      <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
+    <Section id="testimonials">
         <div className="flex flex-col items-center">
           <div className="max-w-2xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: 0.2 }}
-              className="font-semibold text-4xl sm:text-4xl lg:text-5xl text-center mb-4 capitalize"
-            >
-              Our clients speak of us
-            </motion.h2>
-            <p className="text-center text-lg">
+            <SectionTitle title="Our clients speak of us" className="text-center mb-4" />
+            <p className="text-center text-base">
               200+ clients have put trust in us
             </p>
           </div>
 
           <div className="mt-8 text-center md:mt-16 md:order-3">
-            <a
-              href="#"
-              className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"
+            <Link
+              href="/reviews"
+              className="flex gap-2 items-center"
             >
               Check all 200 reviews
-            </a>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
 
           <div className="relative mt-10 md:mt-16 md:order-2">
@@ -78,8 +75,7 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+    </Section>
   );
 };
 
