@@ -3,28 +3,20 @@ import React from "react";
 import { featureData } from "./featureData";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Section from "../common/Section";
+import SectionTitle from "../common/SectionTitle";
 
 const Features = () => {
   return (
-    <section
-      
-      className="relative z-10 overflow-hidden pt-16 md:pt-24 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 text-black"
+    <Section id="features"
     >
       <div className="absolute -top-20 -right-20 w-90 h-90 bg-white/30 rounded-full blur-[100px]"></div>
       <div className="absolute -bottom-20 -left-20 w-90 h-90 bg-white/30 rounded-full blur-[100px]"></div>
 
-      <div className="flex flex-col container max-w-5xl mx-auto px-6" id="features">
         <div className="flex flex-col justify-center items-center gap-6">
-          <div className="max-w-2xl mx-auto mb-16">
-            <motion.h2
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: 0.2 }}
-              className="font-semibold text-4xl sm:text-4xl lg:text-5xl text-center mb-4 capitalize"
-            >
-              Your analytics in one place
-            </motion.h2>
-            <p className="text-center text-lg">
+          <div className="max-w-2xl mx-auto mb-12">
+            <SectionTitle title="Your analytics in one place" className="text-center mb-4" />
+            <p className="text-center text-base">
               Still juggling tools? EP365 unifies your procurement in one
               platform.
             </p>
@@ -62,9 +54,8 @@ const Features = () => {
               );
             })}
           </motion.div>
-        </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

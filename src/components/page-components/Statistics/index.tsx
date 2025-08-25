@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import Counter from "./Counter";
+import Section from "../common/Section";
+import SectionTitle from "../common/SectionTitle";
 
 const Statistics = () => {
   const stats = [
@@ -11,22 +13,15 @@ const Statistics = () => {
   ];
 
   return (
-    <section className="relative z-10 py-12 sm:py-16 lg:py-20">
+    <Section id="statistics">
       <div className="absolute inset-50 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-[#44BCFF]/70 via-transparent to-[#44BCFF]/70 blur-3xl" />
       </div>
 
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto">
         <div className="max-w-2xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: 0.2 }}
-            className="font-semibold text-4xl sm:text-4xl lg:text-5xl text-center mb-4 capitalize"
-          >
-            Our Statistics
-          </motion.h2>
-          <p className="text-center text-lg">
+          <SectionTitle title="Our Statistics" className="mb-4 text-center" />
+          <p className="text-center text-base">
             200+ clients have put trust in us
           </p>
         </div>
@@ -40,15 +35,15 @@ const Statistics = () => {
               transition={{ duration: 0.4, delay: index * 0.15 }}
               viewport={{ once: false }}
             >
-              <h3 className="font-bold text-5xl">
+              <h3 className="font-bold text-5xl mb-1">
                 <Counter target={stat.value} />
               </h3>
-              <p className="text-center text-lg">{stat.label}</p>
+              <p className="text-center text-base">{stat.label}</p>
             </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

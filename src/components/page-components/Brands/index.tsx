@@ -15,12 +15,12 @@ const Brands = () => {
         transition={{ duration: 0.3, delay: 0.2 }}
         className="container px-6"
       >
-          <div className="max-w-2xl mx-auto mb-6">
+          <div className="max-w-2xl mx-auto mb-4">
             <motion.h2
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: 0.2 }}
-              className="text-gray-600 text-center capitalize"
+              className="text-gray-600 font-medium text-base text-center capitalize"
             >
               Trusted by leading businesses
             </motion.h2>

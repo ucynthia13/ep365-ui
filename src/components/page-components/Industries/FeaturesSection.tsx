@@ -25,10 +25,10 @@ const FeaturesSection = () => {
             ) : (
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
+                  <div className="mt-2 mb-2 font-medium">
                     {item.title}
                   </div>
-                  <div className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
+                  <div className="ftext-base">
                     {item.description}
                   </div>
                 </div>
