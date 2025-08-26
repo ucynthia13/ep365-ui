@@ -82,7 +82,7 @@ const headers = {
                 <span className="block font-medium leading-tight">
                     Autonomous Sourcing
                 </span>
-                <span className="block text-sm text-gray-600 leading-tight mt-1">
+                <span className="block text-base leading-tight mt-3">
                     AI automates sourcing workflows from request to award.
                 </span>
             </div>
@@ -122,7 +122,7 @@ const headers = {
                 <span className="block font-medium leading-tight">
                     AI RFP Generator
                 </span>
-                <span className="block text-sm text-gray-600 leading-tight mt-1">
+                <span className="block text-base leading-tight mt-3">
                     Instantly generate RFPs with AI-powered templates and suggestions.
                 </span>
             </div>
@@ -161,7 +161,7 @@ const headers = {
                 <span className="block font-medium leading-tight">
                     AI-Powered Intake Assistant
                 </span>
-                <span className="block text-sm text-gray-600 leading-tight mt-1">
+                <span className="block text-base leading-tight mt-3">
                     Simplify requests with an intelligent assistant that captures details.
                 </span>
             </div>
@@ -189,7 +189,7 @@ const headers = {
                 <span className="block font-medium leading-tight">
                     AI Predictive & Spend Analytics
                 </span>
-                <span className="block text-sm text-gray-600 leading-tight mt-1">
+                <span className="block text-base leading-tight mt-3">
                     Forecast spending trends and optimize budgets with predictive AI.
                 </span>
             </div>
@@ -231,7 +231,7 @@ const headers = {
                             </div>
                         </li>
                     </ul>
-                    <div className="border border-primary bg-primary/20 rounded-lg p-4 flex flex-col gap-1 mt-4">
+                    <div className="border border-primary bg-primary/10 rounded-lg p-4 flex flex-col gap-1 mt-4">
                         <p className="flex items-center text-primary font-medium gap-2">
                             <Lightbulb className="text-primary" />
                             AI Assistant
@@ -244,7 +244,7 @@ const headers = {
                 <p className="font-medium leading-tight">
                     Supplier Analytics & Auto Scoring
                 </p>
-                <p className="text-sm text-gray-600 leading-tight mt-1">
+                <p className="text-base leading-tight mt-3">
                     Evaluate suppliers with AI-driven scoring and insights.
                 </p>
             </div>
@@ -292,7 +292,7 @@ const headers = {
                 <p className="font-medium leading-tight">
                     Compliance & Risk Insights
                 </p>
-                <p className="text-sm text-gray-600 leading-tight mt-1">
+                <p className="text-base leading-tight mt-3">
                     Stay ahead with AI-powered compliance tracking and risk alerts.
                 </p>
             </div>
