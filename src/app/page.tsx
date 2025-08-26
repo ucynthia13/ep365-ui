@@ -6,6 +6,7 @@ import Industries from "@/components/page-components/Industries";
 import PricingPlans from "@/components/page-components/Pricings";
 import Statistics from "@/components/page-components/Statistics";
 import Testimonials from "@/components/page-components/Testimonials";
+import WhyUs from "@/components/page-components/WhyUs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function Home() {
       <Features />
       <Industries />
       <AIFeatures />
+      <WhyUs />
       <Statistics />
       <Testimonials />
       <PricingPlans />
