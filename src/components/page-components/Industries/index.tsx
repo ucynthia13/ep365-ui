@@ -13,7 +13,7 @@ const Industries = () => {
   return (
     <Section id="industries"
     >
-      <div className="flex flex-col px-6" id="solutions">
+      <div className="flex flex-col" id="solutions">
         <div className="flex flex-col justify-center items-center gap-4">
           <div className="max-w-3xl mx-auto text-center">
             <SectionTitle title="All-in-One Procurement Platform" className="mb-2" />
