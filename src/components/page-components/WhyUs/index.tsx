@@ -29,7 +29,7 @@ const WhyUs = () => {
                 <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium w-fit mb-4">
                   {stage.timeline}
                 </span>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-start">
+                <h3 className="text-lg font-semibold mb-4 text-start">
                   {stage.title}
                 </h3>
 
@@ -37,7 +37,7 @@ const WhyUs = () => {
                   {stage.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-start mb-3 last:mb-0">
                       <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <p className="text-sm">
+                      <p>
                         {feature}
                       </p>
                     </div>

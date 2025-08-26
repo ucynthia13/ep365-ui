@@ -85,7 +85,7 @@ const PricingPlans = () => {
                           <ArrowRight className="h-3 w-3 text-white" />
                         </div>
                       </div>
-                      <p className="ml-3 text-sm text-foreground/80">
+                      <p className="ml-3 text-foreground/80">
                         {feature}
                       </p>
                     </div>
