@@ -6,11 +6,12 @@ import {
     IconSignature,
     IconTableColumn,
 } from "@tabler/icons-react";
-import { AlertTriangle, Badge, Bot, CheckCircle, Clock, Lightbulb, MessageCircleQuestion, Section, Sparkles } from "lucide-react";
+import { AlertTriangle, Badge, Bot, CheckCircle, Clock, Lightbulb, MessageCircleQuestion, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import SectionTitle from "../common/SectionTitle";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import Section from "../common/Section";
 
 const AIFeatures = () => {
     return (
