@@ -1,5 +1,4 @@
 import React from "react";
-import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import {
     IconArrowWaveRightUp,
     IconClipboardCopy,
@@ -7,12 +6,11 @@ import {
     IconSignature,
     IconTableColumn,
 } from "@tabler/icons-react";
-import Section from "../page-components/common/Section";
-import SectionTitle from "../page-components/common/SectionTitle";
-import { Button } from "../ui/button";
-import { AlertTriangle, Bot, CheckCircle, Clock, Lightbulb, MessageCircleQuestion, Sparkles } from "lucide-react";
-import { Badge } from "../ui/badge";
+import { AlertTriangle, Badge, Bot, CheckCircle, Clock, Lightbulb, MessageCircleQuestion, Section, Sparkles } from "lucide-react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import SectionTitle from "../common/SectionTitle";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
 const AIFeatures = () => {
     return (

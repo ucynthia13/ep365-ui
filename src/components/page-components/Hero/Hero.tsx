@@ -5,11 +5,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
-import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
-import { people } from "./heroData";
 import Brands from "../Brands";
 import { BorderBeam } from "@/components/magicui/border-beam";
-import { Star } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Sparkles } from "lucide-react";
 
 const Hero = () => {
   const { resolvedTheme } = useTheme();
@@ -18,53 +17,38 @@ const Hero = () => {
   useEffect(() => {
     setColor(resolvedTheme === "dark" ? "#ffffff" : "#000000");
   }, [resolvedTheme]);
+
   const words = [
-    {
-      text: "The",
-    },
-    {
-      text: "Smarter",
-    },
-    {
-      text: "Way",
-    },
-    {
-      text: "To",
-    },
-    {
-      text: "Manage",
-    },
+    { text: "The" },
+    { text: "Smarter" },
+    { text: "Way" },
+    { text: "To" },
+    { text: "Manage" },
     {
       text: "Procurement.",
       className: "text-[#44BCFF] dark:text-blue-500",
     },
   ];
+
   return (
     <div className="relative bg-gray-50 overflow-hidden">
       <section className="relative sm:pt-16 overflow-hidden pt-[130px] md:pt-[120px] xl:pt-[140px] 2xl:pt-[160px]">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center mt-16">
-            <div className="flex flex-col mb-10">
-              <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6">
-                <div className="flex flex-row items-center justify-center">
-                  <AnimatedTooltip items={people} />
-                </div>
-                <div className="flex items-center">
-                  {Array(5)
-                    .fill(0)
-                    .map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 text-[#FDB241] fill-[#FDB241]"
-                      />
-                    ))}
-                </div>
-              </div>
-              <p className="text-gray-600 font-medium mt-4 md:mt-2 text-sm">
-                200+ procurement managers trust EP365 daily
-              </p>
-            </div>
+            {/* New Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="mb-4 flex justify-center"
+            >
+              <Badge className="bg-primary/10 text-primary text-sm font-medium px-4 py-1.5 rounded-full">
+                <Sparkles className="size-6" />Trusted by 500+ Procurement Teams
+              </Badge>
+            </motion.div>
+
             <TypewriterEffectSmooth words={words} />
+
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -75,6 +59,7 @@ const Hero = () => {
               automation, real-time insights, and AI-driven supplier management,
               all in one user-friendly platform.
             </motion.p>
+
             <motion.div
               className="px-8 sm:items-center sm:justify-center sm:px-0 sm:space-x-5 sm:flex mt-9"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -85,13 +70,15 @@ const Hero = () => {
                 href="#"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center w-full px-8 py-2 text-lg font-semibold text-white transition-all duration-2 border-2 border-transparent sm:w-auto rounded-full font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 bg-black hover:text-black hover:bg-gray-50 hover:border-black"
+                className="inline-flex items-center justify-center w-full px-8 py-2 text-lg font-semibold text-white transition-all duration-200 border-2 border-transparent sm:w-auto rounded-full font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 bg-black hover:text-black hover:bg-gray-50 hover:border-black"
               >
                 Book a demo
               </motion.a>
             </motion.div>
           </div>
+
           <Brands />
+
           <motion.div
             className="relative md:h-[500px] overflow-hidden border-x border-t rounded-xl md:rounded-t-xl p-2 bg-gray-100"
             initial={{ opacity: 0, y: 50 }}
