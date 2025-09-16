@@ -17,12 +17,12 @@ import Image from "next/image";
 const AIFeatures = () => {
     return (
         <Section id="ai-features">
-            <div className="flex justify-between mb-12">
+            <div className="flex flex-col md:flex-row justify-between mb-12">
                 <div>
                     <SectionTitle title="AI-powered Procurement Platform That Thinks Ahead" className="max-w-lg mx-auto mb-4" />
                     <p>Seamless procurement through AI Innovation</p>
                 </div>
-                <Button className="mt-6 inline-flex items-center justify-center w-full px-7 py-5 font-semibold text-white transition-all duration-2 border-2 border-transparent sm:w-auto rounded-full font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 bg-black hover:text-black hover:bg-gray-50 hover:border-black">
+                <Button className="mt-6 inline-flex items-center justify-center w-full px-7 py-5 font-semibold text-white transition-all duration-2 border-2 border-transparent sm:w-auto rounded-full font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 bg-black hover:text-black hover:bg-gray-50 hover:border-black w-fit">
                     Book a Demo
                 </Button>
             </div>
