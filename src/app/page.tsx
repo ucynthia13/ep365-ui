@@ -29,7 +29,7 @@ export default function Home() {
       <PricingPlans />
       <Banner />
       <ContactUS />
-      <CTAPopup />
+      <CTAPopup videoLink="https://drive.google.com/file/d/1Ou6DT9lEHTH1AtD_4z4ybcggjICrR8tI/view?usp=sharing" />
     </>
   );
 }
