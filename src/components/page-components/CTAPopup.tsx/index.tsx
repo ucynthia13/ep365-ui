@@ -91,7 +91,7 @@ export const CTAPopup: React.FC<CTAPopupProps> = ({
               <Button
                 onClick={handleRedirect}
                 type="submit"
-                className="w-fit rounded-full"
+                className="w-fit rounded-full cursor-pointer"
               >
                 Book A Demo
               </Button>
