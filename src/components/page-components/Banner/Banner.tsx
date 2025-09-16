@@ -1,18 +1,18 @@
 import React from 'react'
-import Section from '../common/Section';
 import SectionTitle from '../common/SectionTitle';
 import { Button } from '@/components/ui/button';
+import Section from '../common/Section';
 
 export default function Banner() {
     return (
-        <Section
-            id="cta"
-            className="mt-24 py-8 md:py-10 lg:py-12
+        <div className="mx-4">
+            <Section
+                id="cta"
+                className="mt-24 py-8 md:py-10 lg:py-12
     rounded-lg dark:rounded-xs
     bg-gradient-to-bl from-primary/20 via-primary/5 to-primary/40
   ">
-            <div className="max-w-6xl mx-auto gap-16 justify-center items-center text-center">
-                <div>
+                <div className="px-6 gap-16 justify-center items-center text-center">
                     <SectionTitle
                         title="Procure Smarter. Save Faster." className="pb-6" />
                     <p className="max-w-2xl mx-auto text-base">
@@ -22,7 +22,7 @@ export default function Banner() {
                         Request a Demo
                     </Button>
                 </div>
-            </div>
-        </Section>
+            </Section>
+        </div>
     )
 }
