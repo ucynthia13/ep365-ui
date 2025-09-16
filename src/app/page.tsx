@@ -1,4 +1,5 @@
 import AIFeatures from "@/components/AIFeatures";
+import Banner from "@/components/page-components/Banner/Banner";
 import ContactUS from "@/components/page-components/Contact";
 import Features from "@/components/page-components/Features";
 import Hero from "@/components/page-components/Hero/Hero";
@@ -25,6 +26,7 @@ export default function Home() {
       <Statistics />
       <Testimonials />
       <PricingPlans />
+      <Banner />
       <ContactUS />
     </>
   );
