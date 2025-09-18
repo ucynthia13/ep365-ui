@@ -6,31 +6,28 @@ import {
     IconSignature,
     IconTableColumn,
 } from "@tabler/icons-react";
-import { AlertTriangle, Badge, Bot, CheckCircle, Clock, Lightbulb, MessageCircleQuestion, Sparkles } from "lucide-react";
+import { AlertTriangle, Bot, CheckCircle, Clock, Lightbulb, MessageCircleQuestion, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import SectionTitle from "../common/SectionTitle";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import Section from "../common/Section";
+import { Badge } from "@/components/ui/badge";
 
 const AIFeatures = () => {
     return (
-        <Section id="ai-features">
-            <div className="flex flex-col md:flex-row justify-between mb-12">
-                <div>
-                    <SectionTitle title="AI-powered Procurement Platform That Thinks Ahead" className="max-w-lg mx-auto mb-4" />
-                    <p>Seamless procurement through AI Innovation</p>
+        <Section id="ai-features" className="border-divide border-x pb-20 md:pb-24">
+                <div className="flex flex-col justify-center items-center gap-4 mb-12">
+                    <Badge variant="outline" className="text-xs text-primary border-none font-medium">AI-Powered Procurement Platform</Badge>
+                    <SectionTitle title="AI-powered Procurement Platform That Thinks Ahead" className="max-w-md mx-auto text-center" />
+                    <p className="text-muted-foreground">Seamless procurement through AI Innovation</p>
                 </div>
-                <Button className="mt-6 inline-flex items-center justify-center px-7 py-5 font-semibold text-white transition-all duration-2 border-2 border-transparent sm:w-auto rounded-full font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 bg-black hover:text-black hover:bg-gray-50 hover:border-black w-fit">
-                    Book a Demo
-                </Button>
-            </div>
             <BentoGrid className="auto-rows-auto grid-rows-none">
                 {items.map((item, i) => (
                     <BentoGridItem
                         key={i}
                         header={item.header}
-                        className="items-start h-full min-h0- self-start"
+                        className="items-start h-full self-start"
                     />
                 ))}
             </BentoGrid>
@@ -81,7 +78,7 @@ const headers = {
                 <span className="block font-medium leading-tight">
                     Autonomous Sourcing
                 </span>
-                <span className="block text-base leading-tight mt-3">
+                <span className="block text-muted-foreground text-base leading-tight mt-3">
                     AI automates sourcing workflows from request to award.
                 </span>
             </div>
@@ -121,7 +118,7 @@ const headers = {
                 <span className="block font-medium leading-tight">
                     AI RFP Generator
                 </span>
-                <span className="block text-base leading-tight mt-3">
+                <span className="block text-muted-foreground text-base leading-tight mt-3">
                     Instantly generate RFPs with AI-powered templates and suggestions.
                 </span>
             </div>
@@ -160,7 +157,7 @@ const headers = {
                 <span className="block font-medium leading-tight">
                     AI-Powered Intake Assistant
                 </span>
-                <span className="block text-base leading-tight mt-3">
+                <span className="block text-muted-foreground text-base leading-tight mt-3">
                     Simplify requests with an intelligent assistant that captures details.
                 </span>
             </div>
@@ -188,7 +185,7 @@ const headers = {
                 <span className="block font-medium leading-tight">
                     AI Predictive & Spend Analytics
                 </span>
-                <span className="block text-base leading-tight mt-3">
+                <span className="block text-muted-foreground text-base leading-tight mt-3">
                     Forecast spending trends and optimize budgets with predictive AI.
                 </span>
             </div>
@@ -243,7 +240,7 @@ const headers = {
                 <p className="font-medium leading-tight">
                     Supplier Analytics & Auto Scoring
                 </p>
-                <p className="text-base leading-tight mt-3">
+                <p className="text-base text-muted-foreground leading-tight mt-3">
                     Evaluate suppliers with AI-driven scoring and insights.
                 </p>
             </div>
@@ -291,7 +288,7 @@ const headers = {
                 <p className="font-medium leading-tight">
                     Compliance & Risk Insights
                 </p>
-                <p className="text-base leading-tight mt-3">
+                <p className="text-base text-muted-foreground leading-tight mt-3">
                     Stay ahead with AI-powered compliance tracking and risk alerts.
                 </p>
             </div>
