@@ -12,7 +12,7 @@ export default function Brands() {
         {brandsData.map((logo, idx) => (
           <div
             key={idx}
-            className="border-divide group relative overflow-hidden border-r border-b md:border-b md:border-r"
+            className="border-divide group relative overflow-hidden border-r border-b md:border-b md:border-r hover:bg-primary/10 transition duration-300 cursor-pointer"
           >
             <div className="animate-move-left-to-right bg-brand/5 absolute inset-x-0 bottom-0 h-full translate-y-full transition-all duration-200 group-hover:translate-y-0" />
 
@@ -22,7 +22,7 @@ export default function Brands() {
                 alt="Brand Logo"
                 width={160}
                 height={40}
-                className="object-contain transition-all duration-500 dark:invert dark:filter"
+                className="object-contain transition-all duration-500 hover:scale-[1.05] dark:invert dark:filter"
               />
             </div>
           </div>

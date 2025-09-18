@@ -15,6 +15,7 @@ import { MagicCard } from "@/components/magicui/magic-card";
 import Section from "../common/Section";
 import SectionTitle from "../common/SectionTitle";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 const PricingPlans = () => {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
@@ -28,16 +29,17 @@ const PricingPlans = () => {
         <SectionTitle title="Simple and Feasible Pricing" className="mt-4" />
         <div className="my-6 inline-flex border border-border rounded-lg p-1 bg-card">
           <Button
-            variant={billingCycle === "monthly" ? "default" : "ghost"}
+            variant="ghost"
             onClick={() => setBillingCycle("monthly")}
-            className="px-4 py-2 cursor-pointer"
+            className={cn("px-4 py-2 cursor-pointer", billingCycle === "monthly" && "bg-primary hover:bg-primary text-white hover:text-white")}
           >
             Monthly
           </Button>
           <Button
-            variant={billingCycle === "yearly" ? "default" : "ghost"}
+            variant="ghost"
             onClick={() => setBillingCycle("yearly")}
-            className="px-4 py-2 cursor-pointer"
+            className={cn("px-4 py-2 cursor-pointer", billingCycle === "yearly" && "bg-primary hover:bg-primary text-white hover:text-white")}
+
           >
             Yearly
           </Button>
@@ -51,7 +53,7 @@ const PricingPlans = () => {
             className="relative p-4 rounded-lg"
           >
             {plan.popular && (
-              <div className="absolute -top-7 left-0 right-0 mx-auto w-fit px-3 py-1 bg-[#44BCFF] text-white text-xs font-medium rounded-full">
+              <div className="absolute -top-7 left-0 right-0 mx-auto w-fit px-3 py-1 bg-primary text-white text-xs font-medium rounded-full">
                 MOST POPULAR
               </div>
             )}

@@ -7,7 +7,7 @@ export default function Hero() {
 
     <section className="max-w-7xl mx-auto border-divide items-center justify-center border-x px-4 pt-10 pb-10 md:pt-32 md:pb-20 flex flex-col gap-4">
       <Badge variant="outline" className="text-xs text-primary border-none">AI-Powered Procurement Platform for Centralization and Automation</Badge>
-      <h1 className="text-center text-3xl font-medium tracking-tight text-black md:text-4xl lg:text-6xl dark:text-white mb-2">
+      <h1 className="text-center text-3xl font-medium md:text-4xl lg:text-6xl dark:text-white mb-2">
         The smarter way to <br /> manage {" "}
         <span className="text-primary">procurement</span>
       </h1>

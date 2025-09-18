@@ -19,7 +19,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <div className="bg-muted-foreground/25 h-[1px] w-full"></div>
       <Hero />
       <div className="bg-muted-foreground/25 h-[1px] w-full"></div>
       <HeroImage />

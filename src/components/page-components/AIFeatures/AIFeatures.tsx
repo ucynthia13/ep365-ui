@@ -19,7 +19,7 @@ const AIFeatures = () => {
         <Section id="ai-features" className="border-divide border-x pb-20 md:pb-24">
                 <div className="flex flex-col justify-center items-center gap-4 mb-12">
                     <Badge variant="outline" className="text-xs text-primary border-none font-medium">AI-Powered Procurement Platform</Badge>
-                    <SectionTitle title="AI-powered Procurement Platform That Thinks Ahead" className="max-w-md mx-auto text-center" />
+                    <SectionTitle title="AI-powered Procurement Platform That Thinks Ahead" className="max-w-sm mx-auto text-center" />
                     <p className="text-muted-foreground">Seamless procurement through AI Innovation</p>
                 </div>
             <BentoGrid className="auto-rows-auto grid-rows-none">
@@ -101,14 +101,14 @@ const headers = {
                         </li>
 
                         <li className="flex flex-col">
-                            <div className="flex flex-col gap-2 border-l-4 border-primary bg-primary/30 p-3 rounded-lg">
+                            <div className="flex flex-col gap-2 border-l-4 border-primary bg-primary/20 p-3 rounded-lg">
                                 <p className="font-medium">AI Suggestion:</p>
                                 <span>AI Sourcing Strategy</span>
                             </div>
                         </li>
 
                         <div className="flex gap-2">
-                            <Button>Accept</Button>
+                            <Button className="bg-black">Accept</Button>
                             <Button variant="outline">Edit</Button>
                         </div>
                     </ul>
@@ -144,12 +144,12 @@ const headers = {
                             </div>
                         </li>
                     </ul>
-                    <div className="bg-primary rounded-lg p-4 flex flex-col gap-1 mt-4 text-sm">
-                        <p className="flex items-center text-white font-medium gap-2">
-                            <Bot className="text-white" />
+                    <div className="bg-primary/20 rounded-lg p-4 flex flex-col gap-1 mt-4 text-sm">
+                        <p className="flex items-center font-medium gap-2 text-primary">
+                            <Bot />
                             AI Assistant
                         </p>
-                        <p className="text-white">I can help auto-fill this form based on similar requests. Shall I proceed?</p>
+                        <p>I can help auto-fill this form based on similar requests. Shall I proceed?</p>
                     </div>
                 </div>
             </div>

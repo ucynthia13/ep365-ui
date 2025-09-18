@@ -21,8 +21,8 @@ export function MagicCard({
   gradientSize = 200,
   gradientColor = "#FFFFFF",
   gradientOpacity = 0.8,
-  gradientFrom = "#44BCFF",
-  gradientTo = "#44BCFF",
+  gradientFrom = "oklch(68.853% 0.17846 32.012)",
+  gradientTo = "oklch(68.853% 0.17846 32.012)",
 }: MagicCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(-gradientSize);
@@ -84,12 +84,12 @@ export function MagicCard({
         className="pointer-events-none absolute inset-0 rounded-[inherit] duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
-          radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px,
-          ${gradientFrom}, 
-          ${gradientTo}, 
-          var(--border) 100%
-          )
-          `,
+            radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px,
+            ${gradientFrom}, 
+            ${gradientTo}, 
+            var(--border) 100%
+            )
+            `,
         }}
       />
       <div className="absolute inset-px rounded-[inherit] bg-background" />
@@ -97,8 +97,8 @@ export function MagicCard({
         className="pointer-events-none absolute inset-px rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
-            radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${gradientColor}, transparent 100%)
-          `,
+              radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${gradientColor}, transparent 100%)
+            `,
           opacity: gradientOpacity,
         }}
       />
