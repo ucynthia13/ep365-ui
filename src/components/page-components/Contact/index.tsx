@@ -38,11 +38,11 @@ const ContactUS = () => {
   });
 
   return (
-    <Section id="contact" className="pb-28">
+    <Section id="contact" className="pb-20 md:pb-24 border-x border-divide">
       <div className="flex flex-col md:flex-row gap-8">
         <div className="flex flex-col w-full md:w-1/2 items-start text-start gap-4">
           <div className="p-4 bg-white rounded-xl shadow mb-4">
-            <Mail className="text-[#44BCFF] w-6 h-6" />
+            <Mail className="text-primary w-6 h-6" />
           </div>
           <SectionTitle title="Contact Us" className="mb-4" />
           <p>
@@ -88,14 +88,13 @@ const ContactUS = () => {
           />
         </div>
 
-        {/* Contact Form */}
         <div className="w-full md:w-1/2 space-y-4">
-          <Card className="relative overflow-hidden">
+          <Card className="relative overflow-hidden shadow-none">
             <BorderBeam
               duration={8}
               size={300}
               reverse
-              className="absolute inset-0 z-10 pointer-events-none from-transparent via-[#44BCFF] to-transparent"
+              className="absolute inset-0 z-10 pointer-events-none from-transparent via-primary to-transparent"
             />
             <Form {...contactForm}>
               <form
@@ -171,7 +170,7 @@ const ContactUS = () => {
                   )}
                 />
 
-                <Button type="submit" className="btn-primary w-full md:w-1/2">
+                <Button className="bg-black w-full md:w-1/2">
                   Submit
                 </Button>
               </form>

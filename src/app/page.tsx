@@ -1,14 +1,14 @@
-import AIFeatures from "@/components/page-components/AIFeatures";
+import AIFeatures from "@/components/page-components/AIFeatures/AIFeatures";
 import Banner from "@/components/page-components/Banner/Banner";
+import Benefits from "@/components/page-components/Benefits/Benefits";
+import Brands from "@/components/page-components/Brands/Brands";
 import ContactUS from "@/components/page-components/Contact";
-import { CTAPopup } from "@/components/page-components/CTAPopup.tsx";
-import Features from "@/components/page-components/Features";
+import Features from "@/components/page-components/Features/Features";
 import Hero from "@/components/page-components/Hero/Hero";
-import Industries from "@/components/page-components/Industries";
-import PricingPlans from "@/components/page-components/Pricings";
-import Statistics from "@/components/page-components/Statistics";
-import Testimonials from "@/components/page-components/Testimonials";
-import WhyUs from "@/components/page-components/WhyUs";
+import HeroImage from "@/components/page-components/Hero/HeroImage";
+import Industries from "@/components/page-components/Industries/Industries";
+import PricingPlans from "@/components/page-components/Pricings/Pricings";
+import Testimonials from "@/components/page-components/Testimonials/Testimonials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,16 +20,28 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Features />
-      <Industries />
+      <div className="bg-muted-foreground/25 h-[1px] w-full"></div>
+      <HeroImage />
+      <div className="bg-muted-foreground/25 h-[1px] w-full"></div>
+      <Brands />
+      <div className="bg-muted-foreground/25 h-[1px] w-full"></div>
+      {/* <HowItWorks items={items} interval={5000} /> */}
+      {/* <div className="bg-muted-foreground/25 h-[1px] w-full"></div> */}
       <AIFeatures />
-      <WhyUs />
-      <Statistics />
+      <div className="bg-muted-foreground/25 h-[1px] w-full"></div>
+      <Features />
+      <div className="bg-muted-foreground/25 h-[1px] w-full"></div>
+      <Industries />
+      <div className="bg-muted-foreground/25 h-[1px] w-full"></div>
+      <Benefits />
+      <div className="bg-muted-foreground/25 h-[1px] w-full"></div>
       <Testimonials />
+      <div className="bg-muted-foreground/25 h-[1px] w-full"></div>
       <PricingPlans />
+      <div className="bg-muted-foreground/25 h-[1px] w-full"></div>
       <Banner />
+      <div className="bg-muted-foreground/25 h-[1px] w-full"></div>
       <ContactUS />
-      <CTAPopup videoLink="https://drive.google.com/file/d/1Ou6DT9lEHTH1AtD_4z4ybcggjICrR8tI/view?usp=sharing" />
     </>
   );
 }

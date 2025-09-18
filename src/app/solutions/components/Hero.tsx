@@ -1,8 +1,6 @@
 "use client";
 
-import { BrandsScrollable } from "@/components/page-components/Brands";
 import { motion } from "framer-motion";
-import brandsData from "../../about-us/components/Partners/partnersData";
 
 const Hero = () => {
   return (
@@ -44,7 +42,6 @@ const Hero = () => {
                 Book a demo
               </motion.a>
             </motion.div>
-            <BrandsScrollable data={brandsData} />
           </div>
         </div>
       </section>
