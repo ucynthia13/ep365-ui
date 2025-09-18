@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import Header from "@/components/page-components/Header";
 import Footer from "@/components/page-components/Footer";
 import TopBanner from "@/components/page-components/Banner/top-banner";
 
@@ -33,7 +32,7 @@ export default function RootLayout({
       >
         <Providers>
           <TopBanner />
-          <Header />
+          {/* <Header /> */}
           {children}
           <Footer />
         </Providers>

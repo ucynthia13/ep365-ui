@@ -36,7 +36,7 @@ export const BentoGridItem = ({
   return (
       <Card
         className={cn(
-          "relative h-100 overflow-hidden group/bento shadow-input row-span-1 flex flex-col rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 dark:border-white/[0.2] dark:bg-black dark:shadow-none items-center",
+          "relative h-100 overflow-hidden row-span-1 flex flex-col rounded-xl  p-4 transition duration-200 items-center shadow-none",
           className
         )}
       >
@@ -46,7 +46,7 @@ export const BentoGridItem = ({
           <div className="mt-2 mb-2 font-medium">
             {title}
           </div>
-          <div>
+          <div className="text-muted-foreground">
             {description}
           </div>
         </div>
