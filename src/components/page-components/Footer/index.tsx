@@ -34,7 +34,6 @@ const Footer = ({
                   src={logo.src}
                   alt={logo.alt}
                   title={logo.title}
-                  // className="h-8"
                   width={100}
                   height={100}
                 />
@@ -43,7 +42,7 @@ const Footer = ({
 
             <ul className="flex items-center space-x-2 text-muted-foreground">
               {socialLinks.map((social, idx) => (
-                <li key={idx} className="font-medium hover:text-[#44BCFF]/90">
+                <li key={idx} className="hover:text-primary">
                   <a href={social.href} aria-label={social.label}>
                     {social.icon}
                   </a>
@@ -54,10 +53,10 @@ const Footer = ({
           <div className="grid w-full gap-6 sm:grid-cols-2 md:grid-cols-4 lg:gap-20">
             {sections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
-                <h3 className="mb-4 text-sm font-bold">{section.title}</h3>
-                <ul className="space-y-3 text-sm font-medium text-muted-foreground">
+                <h3 className="mb-4 text-sm font-semibold">{section.title}</h3>
+                <ul className="space-y-3 text-sm text-muted-foreground">
                   {section.links.map((link, linkIdx) => (
-                    <li key={linkIdx} className="hover:text-[#44BCFF]/90">
+                    <li key={linkIdx} className="hover:text-primary">
                       <a href={link.href}>{link.name}</a>
                     </li>
                   ))}
@@ -66,11 +65,11 @@ const Footer = ({
             ))}
           </div>
         </div>
-        <div className="mt-16 max-w-5xl mx-auto flex flex-col justify-between gap-4 border-t py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">
+        <div className="mt-16 max-w-5xl mx-auto flex flex-col justify-between gap-4 border-t py-8 text-xs text-muted-foreground md:flex-row md:items-center md:text-left">
           <p className="order-2 lg:order-1">{copyright}</p>
           <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row">
             {legalLinks.map((link, idx) => (
-              <li key={idx} className="hover:text-[#44BCFF]/90">
+              <li key={idx} className="hover:text-primary">
                 <a href={link.href}> {link.name}</a>
               </li>
             ))}
