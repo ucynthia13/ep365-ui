@@ -9,7 +9,7 @@ type SectionProps = {
 
 export default function Section({ children, className, id }: SectionProps) {
   return (
-    <section className={cn("relative z-10 pt-24 md:pt-28 max-w-7xl mx-auto px-4 md:px-6 overflow-hidden", className)} id={id}>
+    <section className={cn("relative z-10 pt-20 md:pt-24 max-w-7xl mx-auto px-4 md:px-6 overflow-hidden", className)} id={id}>
       {children}
     </section>
   );
