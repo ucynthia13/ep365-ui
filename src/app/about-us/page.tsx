@@ -7,9 +7,7 @@ import Features from "./components/Features/Features";
 import FAQs from "./components/FAQs";
 import ContactUS from "@/components/page-components/Contact";
 import WhyUs from "./components/WhyUs/WhyUs";
-// import Statistics from "./components/Statistics/Statistics";
 import ComparisonTable from "./components/ComparisonTable";
-import Partners from "./components/Partners/Partners";
 export const metadata: Metadata = {
   title: "About Us | EP 365",
   description:
@@ -21,10 +19,8 @@ const AboutUsPage = () => {
       <Hero />
       <EPOverview />
       <Mission />
-      <Partners />
       <Features />
       <WhyUs />
-      {/* <Statistics /> */}
       <ComparisonTable />
       <FAQs />
       <ContactUS />
