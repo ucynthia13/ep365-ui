@@ -16,12 +16,12 @@ import { Badge } from "@/components/ui/badge";
 
 const AIFeatures = () => {
     return (
-        <Section id="ai-features" className="border-divide border-x pb-20 md:pb-24">
-                <div className="flex flex-col justify-center items-center gap-4 mb-12">
-                    <Badge variant="outline" className="text-xs text-primary border-none font-medium">AI-Powered Procurement Platform</Badge>
-                    <SectionTitle title="AI-powered Procurement Platform That Thinks Ahead" className="max-w-sm mx-auto text-center" />
-                    <p className="text-muted-foreground">Seamless procurement through AI Innovation</p>
-                </div>
+        <Section id="ai-features" className="border-divide border-x py-12">
+            <div className="flex flex-col justify-center items-center gap-4 mb-12">
+                <Badge variant="outline" className="text-xs text-primary border-none font-medium">AI-Powered Procurement Platform</Badge>
+                <SectionTitle title="AI-powered Procurement Platform That Thinks Ahead" className="max-w-sm mx-auto text-center" />
+                <p className="text-muted-foreground">Seamless procurement through AI Innovation</p>
+            </div>
             <BentoGrid className="auto-rows-auto grid-rows-none">
                 {items.map((item, i) => (
                     <BentoGridItem
@@ -43,34 +43,34 @@ const headers = {
             <div className="rounded-lg p-4 bg-gray-50 dark:bg-neutral-900 w-full">
                 <div className="rounded-lg p-3 bg-white dark:bg-black">
                     <div className="flex justify-between mb-4">
-                        <p className="font-medium text-sm">Sourcing Workflow</p>
-                        <p className="text-primary font-medium text-sm">AI Active</p>
+                        <p className="font-medium">Sourcing Workflow</p>
+                        <p className="text-primary font-medium">AI Active</p>
                     </div>
-                    <ul className="mt-2 space-y-4 text-sm">
+                    <ul className="mt-2 space-y-4">
                         <li className="flex flex-col">
                             <div className="flex items-center gap-2">
                                 <CheckCircle className="size-5 text-green-500" />
-                                <span>Request Analyzed</span>
+                                <span className="text-muted-foreground">Request Analyzed</span>
                             </div>
                         </li>
 
                         <li className="flex flex-col">
                             <div className="flex items-center gap-2">
                                 <Bot className="text-primary size-5 " />
-                                <span>AI Sourcing Strategy</span>
+                                <span className="text-muted-foreground">AI Sourcing Strategy</span>
                             </div>
                         </li>
 
                         <li className="flex flex-col">
                             <div className="flex items-center gap-2">
                                 <Clock className="text-yellow-500 size-5" />
-                                <span>Award Pending</span>
+                                <span className="text-muted-foreground">Award Pending</span>
                             </div>
                         </li>
                     </ul>
-                    <div className="border border-primary bg-primary/10 rounded-lg p-4 flex flex-col gap-1 mt-4 text-sm">
+                    <div className="border border-primary bg-primary/10 rounded-lg p-4 flex flex-col gap-1 mt-4">
                         <p className="text-primary font-medium">AI Recommendation</p>
-                        <p>3 qualified suppliers found</p>
+                        <p className="text-muted-foreground">3 qualified suppliers found</p>
                     </div>
                 </div>
             </div>
@@ -89,21 +89,21 @@ const headers = {
             <div className="rounded-lg p-4 bg-gray-50 dark:bg-neutral-900 w-full">
                 <div className="rounded-lg p-3 bg-white dark:bg-black">
                     <div className="flex justify-between mb-4">
-                        <p className="font-medium text-sm">RFP Generator</p>
+                        <p className="font-medium">RFP Generator</p>
                         <Badge className="rounded-full bg-primary/10 text-primary font-medium">AI Powered</Badge>
                     </div>
-                    <ul className="mt-2 space-y-4 text-sm">
+                    <ul className="mt-2 space-y-4">
                         <li className="flex flex-col">
                             <div className="flex items-center gap-2">
                                 <Sparkles className="text-primary size-5" />
-                                <span>Auto-generating questions...</span>
+                                <span className="text-muted-foreground">Auto-generating questions...</span>
                             </div>
                         </li>
 
                         <li className="flex flex-col">
                             <div className="flex flex-col gap-2 border-l-4 border-primary bg-primary/20 p-3 rounded-lg">
                                 <p className="font-medium">AI Suggestion:</p>
-                                <span>AI Sourcing Strategy</span>
+                                <span className="text-muted-foreground">AI Sourcing Strategy</span>
                             </div>
                         </li>
 
@@ -128,28 +128,28 @@ const headers = {
         <>
             <div className="rounded-lg p-4 bg-gray-50 dark:bg-neutral-900 w-full">
                 <div className="rounded-lg p-3 bg-white dark:bg-black">
-                    <p className="font-medium text-sm mb-4">Request Form</p>
-                    <ul className="mt-2 space-y-4 text-sm">
+                    <p className="font-medium  mb-4">Request Form</p>
+                    <ul className="mt-2 space-y-4 ">
                         <li className="flex flex-col">
                             <div className="flex items-center gap-2">
-                                <span>Category:</span>
+                                <span className="text-muted-foreground">Category:</span>
                                 <div className="h-2.5 bg-accent rounded-full mt-1 w-[80%]"></div>
                             </div>
                         </li>
 
                         <li className="flex flex-col">
                             <div className="flex items-center gap-2">
-                                <span>Budget:</span>
+                                <span className="text-muted-foreground">Budget:</span>
                                 <div className="h-2.5 bg-accent rounded-full mt-1 w-[80%]"></div>
                             </div>
                         </li>
                     </ul>
-                    <div className="bg-primary/20 rounded-lg p-4 flex flex-col gap-1 mt-4 text-sm">
+                    <div className="bg-primary/20 rounded-lg p-4 flex flex-col gap-1 mt-4 ">
                         <p className="flex items-center font-medium gap-2 text-primary">
                             <Bot />
                             AI Assistant
                         </p>
-                        <p>I can help auto-fill this form based on similar requests. Shall I proceed?</p>
+                        <p className="text-muted-foreground">I can help auto-fill this form based on similar requests. Shall I proceed?</p>
                     </div>
                 </div>
             </div>
@@ -168,16 +168,16 @@ const headers = {
             <div className="rounded-lg p-4 bg-gray-50 dark:bg-neutral-900 w-full">
                 <div className="rounded-lg p-3 bg-white dark:bg-black">
                     <div className="flex justify-between">
-                        <p className="font-medium text-sm">Spend Analytics</p>
-                        <p className="text-primary font-medium text-sm">Live</p>
+                        <p className="font-medium ">Spend Analytics</p>
+                        <p className="text-primary font-medium ">Live</p>
                     </div>
                     <Image src="/images/hero/graph.png" width={100} height={100} alt="Graph" className="w-60 h-15 mt-4" />
-                    <div className="border border-primary bg-primary/10 rounded-lg p-4 flex flex-col gap-1 mt-4 text-sm">
+                    <div className="border border-primary bg-primary/10 rounded-lg p-4 flex flex-col gap-1 mt-4 ">
                         <p className="flex items-center text-primary font-medium gap-2">
                             <Bot className="text-primary" />
                             AI Forecast
                         </p>
-                        <p>+15% spend projected Q4</p>
+                        <p className="text-muted-foreground">+15% spend projected Q4</p>
                     </div>
                 </div>
             </div>
@@ -195,11 +195,11 @@ const headers = {
         <>
             <div className="rounded-lg p-4 bg-gray-50 dark:bg-neutral-900 w-full">
                 <div className="rounded-lg p-3 bg-white dark:bg-black">
-                    <p className="font-medium text-sm mb-4">Supplier Evaluation</p>
-                    <ul className="mt-2 space-y-4 text-sm">
+                    <p className="font-medium  mb-4">Supplier Evaluation</p>
+                    <ul className="mt-2 space-y-4 ">
                         <li className="flex flex-col">
                             <div className="flex items-center justify-between">
-                                <span>Acme Corp</span>
+                                <span className="text-muted-foreground">Acme Corp</span>
                                 <div className="flex gap-1 items-center">
                                     <div className="h-1.5 bg-green-500 rounded-full mt-1 w-12"></div>
                                     <span className="text-green-500">95</span>
@@ -209,7 +209,7 @@ const headers = {
 
                         <li className="flex flex-col">
                             <div className="flex items-center justify-between">
-                                <span>Beta LLC</span>
+                                <span className="text-muted-foreground">Beta LLC</span>
                                 <div className="flex gap-1 items-center">
                                     <div className="h-1.5 bg-yellow-400 rounded-full mt-1 w-8"></div>
                                     <span className="text-yellow-400">78</span>
@@ -219,7 +219,7 @@ const headers = {
 
                         <li className="flex flex-col">
                             <div className="flex items-center justify-between">
-                                <span>Gamma Inc</span>
+                                <span className="text-muted-foreground">Gamma Inc</span>
                                 <div className="flex gap-1 items-center">
                                     <div className="h-1.5 bg-destructive rounded-full mt-1 w-4"></div>
                                     <span className="text-destructive">62</span>
@@ -227,12 +227,12 @@ const headers = {
                             </div>
                         </li>
                     </ul>
-                    <div className="border border-primary bg-primary/10 rounded-lg p-4 flex flex-col gap-1 mt-4 text-sm">
+                    <div className="border border-primary bg-primary/10 rounded-lg p-4 flex flex-col gap-1 mt-4 ">
                         <p className="flex items-center text-primary font-medium gap-2">
                             <Lightbulb className="text-primary" />
                             AI Assistant
                         </p>
-                        <p>I can help auto-fill this form based on similar requests. Shall I proceed?</p>
+                        <p className="text-muted-foreground">I can help auto-fill this form based on similar requests. Shall I proceed?</p>
                     </div>
                 </div>
             </div>
@@ -251,15 +251,15 @@ const headers = {
             <div className="rounded-lg p-4 bg-gray-50 dark:bg-neutral-900 w-full">
                 <div className="rounded-lg p-3 bg-white dark:bg-black">
                     <div className="flex justify-between">
-                        <p className="font-medium text-sm">Risk Monitor</p>
-                        <p className="text-green-500 font-medium text-sm">Secure</p>
+                        <p className="font-medium ">Risk Monitor</p>
+                        <p className="text-green-500 font-medium ">Secure</p>
                     </div>
-                    <ul className="mt-2 space-y-4 text-sm">
+                    <ul className="mt-2 space-y-4 ">
                         <li className="flex flex-col bg-yellow-100 border border-yellow-500 rounded-lg py-2 px-4">
                             <div className="flex items-center justify-between">
                                 <div className="flex gap-2 justify-center items-center">
                                     <AlertTriangle className="text-yellow-500 size-5" />
-                                    <span>Contract Expiry</span>
+                                    <span className="text-muted-foreground">Contract Expiry</span>
                                 </div>
                                 <p className="text-yellow-500">30 days</p>
                             </div>
@@ -269,18 +269,18 @@ const headers = {
                             <div className="flex items-center justify-between">
                                 <div className="flex gap-2 justify-center items-center">
                                     <MessageCircleQuestion className="text-green-500 size-5" />
-                                    <span>Compliance</span>
+                                    <span className="text-muted-foreground">Compliance</span>
                                 </div>
                                 <p className="text-green-500">100%</p>
                             </div>
                         </li>
                     </ul>
-                    <div className="border border-primary bg-primary/10 rounded-lg p-4 flex flex-col gap-1 mt-4 text-sm">
+                    <div className="border border-primary bg-primary/10 rounded-lg p-4 flex flex-col gap-1 mt-4">
                         <p className="flex items-center text-primary font-medium gap-2">
                             <Bot className="text-primary" />
                             AI Alert
                         </p>
-                        <p>Renewal process auto-initiated</p>
+                        <p className="text-muted-foreground">Renewal process auto-initiated</p>
                     </div>
                 </div>
             </div>

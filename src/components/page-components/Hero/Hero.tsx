@@ -5,7 +5,7 @@ import { Star } from "lucide-react";
 export default function Hero() {
   return (
 
-    <section className="max-w-7xl mx-auto border-divide items-center justify-center border-x px-4 pt-10 pb-10 md:pt-32 md:pb-20 flex flex-col gap-4">
+    <section className="max-w-7xl mx-auto border-divide items-center justify-center border-x px-4 pt-16 pb-10 md:pt-36 lg:pt-48 md:pb-20 flex flex-col gap-4">
       <Badge variant="outline" className="text-xs text-primary border-none">AI-Powered Procurement Platform for Centralization and Automation</Badge>
       <h1 className="text-center text-3xl font-medium md:text-4xl lg:text-6xl dark:text-white mb-2">
         The smarter way to <br /> manage {" "}

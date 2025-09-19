@@ -1,152 +1,57 @@
-import React from "react";
+"use client";
 
-import Image from "next/image";
+import { useRef } from "react";
 
-const FeaturesSection = () => {
-  return (
-    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {items.map((item, i) => (
-        <div
-          key={i}
-          className={`${item.className} ${item.bgColor} rounded-xl overflow-hidden min-h-[300px]`}
-        >
-          {item.header}
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default FeaturesSection;
-
-const items = [
+const features = [
   {
-    className: "md:col-span-2 lg:col-span-3",
-    bgColor: "bg-gray-100",
-    title: "Procurement built with your business in mind",
-    description: "EP360 delivers a seamless, end-to-end procurement experience with powerful automation and enterprise reliability.",
-    header: (
-      <div className="p-6 grid grid-cols-1 sm:grid-cols-3 gap-6 justify-center items-center">
-        <div className="mb-6 sm:mb-0">
-          <h2 className="text-2xl text-foreground font-medium mb-2">Procurement built with your business in mind</h2>
-          <p className="text-sm text-basse text-muted-foreground">EP360 delivers a seamless, end-to-end procurement experience with powerful automation and enterprise reliability.</p>
-        </div>
-        <div className="flex justify-center sm:col-span-2">
-          <Image
-            src="/images/hero/procurement.png"
-            width={500}
-            height={400}
-            alt="Procurement"
-            className="w-full h-auto object-contain"
-          />
-        </div>
-      </div>
-    ),
+    title: "Intake management",
+    description:
+      "Capture purchase and vendor data right at the request stage, with employees guided step by step through a smart intake form.",
+    image: "/images/hero/procurement.png",
   },
   {
-    className: "md:col-span-2 lg:col-span-2",
-    bgColor: "bg-gray-100",
-    header: (
-      <div className="p-6 h-full flex flex-col">
-        <div className="flex justify-between items-center gap-4">
-          <div className="mb-4">
-            <h3 className="text-lg font-medium mb-2">Procurement from anywhere</h3>
-            <p className="text-muted-foreground text-sm max-w-xs">Empower your team to create, track, and approve procurement workflows securely from any device.</p>
-          </div>
-          <Image
-            src="/images/hero/person.png"
-            width={300}
-            height={200}
-            alt="Procurement"
-            className="w-full max-w-sm h-auto object-contain"
-          />
-        </div>
-      </div>
-    ),
+    title: "Purchasing",
+    description:
+      "Keep buying easy and compliant with pre-approved vendors, items, and workflows built into the procurement software.",
+    image: "/images/hero/person.png",
   },
   {
-    className: "md:col-span-1",
-    bgColor: "bg-gray-100",
-    header: (
-      <div className="p-6 h-full flex flex-col">
-        <div className="mb-4">
-          <h3 className="text-lg font-medium mb-2">Smooth sync with your core systems</h3>
-          <p className="text-muted-foreground text-sm">Integrate seamlessly with ERPs, finance, and collaboration tools for complete process harmony.</p>
-        </div>
-        <div className="flex justify-between items-center">
-          <Image
-            src="/images/hero/sync2.png"
-            width={500}
-            height={400}
-            alt="Procurement"
-            className="w-full max-w-md h-auto object-contain"
-            priority
-          />
-        </div>
-      </div>
-    ),
-  },
-  {
-    className: "md:col-span-1",
-    bgColor: "bg-gray-100",
-    header: (
-      <div className="p-6 h-full flex flex-col">
-        <div className="mb-4">
-          <h3 className="text-lg font-medium mb-2">Leading with innovation</h3>
-          <p className="text-muted-foreground text-sm">State-of-the-art advice, advanced workflows, analytics, and automation to keep you ahead.</p>
-        </div>
-        <div className="flex justify-between items-center">
-          <Image
-            src="/images/hero/img.png"
-            width={700}
-            height={600}
-            alt="Procurement"
-            className="w-full max-w-md h-auto object-contain"
-          />
-        </div>
-      </div>
-    ),
-  },
-  {
-    className: "md:col-span-1",
-    bgColor: "bg-gray-100",
-    header: (
-      <div className="p-6 h-full flex flex-col">
-        <div className="mb-4">
-          <h3 className="text-lg font-medium mb-2">Customization for your business</h3>
-          <p className="text-muted-foreground text-sm">Tailor approval chains, budgets, and reports to fit your exact procurement needs.</p>
-        </div>
-        <div className="rounded-lg overflow-clip">
-          <Image
-            src="/images/hero/img.png"
-            width={700}
-            height={600}
-            alt="Procurement"
-            className="w-full max-w-md h-auto object-contain"
-          />
-        </div>
-      </div>
-    ),
-  },
-  {
-    className: "md:col-span-1",
-    bgColor: "bg-gray-100",
-    header: (
-      <div className="p-6 h-full flex flex-col">
-        <div className="mb-4">
-          <h3 className="text-lg font-medium mb-2">Enterprise-grade security & compliance</h3>
-          <p className="text-muted-foreground text-sm">Built with strict security standards and compliance frameworks like GDPR, SOC2, and ISO.</p>
-        </div>
-        <div className="rounded-lg overflow-clip">
-          <Image
-            src="/images/hero/customization.png"
-            width={700}
-            height={600}
-            alt="Procurement"
-            className="w-full max-w-md h-auto object-contain"
-          />
-        </div>
-      </div>
-    ),
+    title: "AI-powered AP automation",
+    description:
+      "Automate data extraction with AI-powered OCR and pay only fully approved, matched, and validated invoices.",
+    image: "/images/hero/sync2.png",
   },
 ];
+
+export default function FeatureScroller() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <section className="relative">
+      <div
+        ref={scrollRef}
+        className="flex overflow-x-auto gap-6 px-4 pb-4 scrollbar-hide scroll-smooth"
+      >
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="min-w-[320px] md:min-w-[400px] md:max-w-lg flex-shrink-0 rounded-xl overflow-hidden border border-border cursor-pointer"
+          >
+            <div
+              className="h-70 bg-gray-100/50 bg-center bg-no-repeat bg-contain"
+              style={{ backgroundImage: `url(${feature.image})` }}
+            >
+            </div>
+
+            <div className="p-5">
+              <h3 className="font-medium">
+                {feature.title}
+              </h3>
+              <p className="text-muted-foreground mt-2">{feature.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

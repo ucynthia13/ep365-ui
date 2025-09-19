@@ -12,7 +12,7 @@ const Industries = () => {
   const [activeSection, setActiveSection] = useState<'features' | 'industries'>('features');
 
   return (
-    <Section id="industries" className="border-divide border-x pb-20 md:pb-24"
+    <Section id="industries" className="border-divide md:px-0 border-x py-12"
     >
       <div className="flex flex-col" id="solutions">
         <div className="flex flex-col justify-center items-center gap-4">

@@ -4,10 +4,11 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 import SectionTitle from "../common/SectionTitle";
 import { benefitsData } from "./benefitsData";
+import Section from "../common/Section";
 
 const Benefits = () => {
   return (
-    <section className="max-w-7xl mx-auto border-divide relative overflow-hidden border-x px-4 py-20 md:px-8">
+    <Section className="border-divide border-x py-12">
       <div className="relative flex flex-col justify-center items-center text-center gap-4">
         <Badge variant="outline" className="text-xs text-primary border-none">
           Benefits
@@ -38,7 +39,7 @@ const Benefits = () => {
           );
         })}
       </div>
-    </section>
+    </Section>
   );
 };
 

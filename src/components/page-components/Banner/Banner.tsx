@@ -5,7 +5,7 @@ import Section from "../common/Section";
 
 export default function Banner() {
   return (
-    <Section className="border-x border-divide grid grid-cols-1 md:grid-cols-2 gap-10 bg-gray-100 pb-20 md:pb-24">
+    <Section className="border-x border-divide grid grid-cols-1 md:grid-cols-2 gap-10 bg-gray-100 pb-16">
       <div className="flex flex-col items-start justify-center gap-6">
         <SectionTitle title="Experience the Future of Procurement with AI" className="text-left max-w-sm" />
         <p className="text-sm text-muted-foreground md:text-sm lg:text-base text-left max-w-xl">
@@ -16,25 +16,25 @@ export default function Banner() {
       </div>
       <div className="flex items-center justify-center gap-10">
         <Image
-          alt="Lyber"
-          src="/images/brands/lyber.svg"
+          alt="CCPA"
+          src="/images/brands/CCPA.webp"
           width={56}
           height={56}
-          className="h-auto w-72"
+          className="h-auto w-12"
         />
         <Image
-          alt="Taxi"
-          src="/images/brands/taxi.svg"
+          alt="GPDR"
+          src="/images/brands/GDPR.webp"
           width={56}
           height={56}
-          className="h-auto w-72"
+          className="h-auto w-12"
         />
         <Image
-          alt="Way"
-          src="/images/brands/way.svg"
+          alt="ISO"
+          src="/images/brands/ISO.webp"
           width={56}
           height={56}
-          className="h-auto w-72"
+          className="h-auto w-12"
         />
       </div>
     </Section>
