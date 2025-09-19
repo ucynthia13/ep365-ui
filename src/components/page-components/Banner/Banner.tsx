@@ -16,22 +16,22 @@ export default function Banner() {
       </div>
       <div className="flex items-center justify-center gap-10">
         <Image
-          alt="Lyber"
-          src="/images/brands/lyber.svg"
+          alt="CCPA"
+          src="/images/brands/CCPA.webp"
           width={56}
           height={56}
           className="h-auto w-72"
         />
         <Image
-          alt="Taxi"
-          src="/images/brands/taxi.svg"
+          alt="GPDR"
+          src="/images/brands/GDPR.webp"
           width={56}
           height={56}
           className="h-auto w-72"
         />
         <Image
-          alt="Way"
-          src="/images/brands/way.svg"
+          alt="ISO"
+          src="/images/brands/ISO.webp"
           width={56}
           height={56}
           className="h-auto w-72"
