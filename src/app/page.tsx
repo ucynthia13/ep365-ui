@@ -10,6 +10,8 @@ import Industries from "@/components/page-components/Industries/Industries";
 import PricingPlans from "@/components/page-components/Pricings/Pricings";
 import Testimonials from "@/components/page-components/Testimonials/Testimonials";
 import { Metadata } from "next";
+import FAQ from "@/components/page-components/FAQs/FAQs";
+import OrbitAnimation from "@/components/page-components/OrbitAnimation/OrbitAnimation";
 
 export const metadata: Metadata = {
   title: "EP365 Procurement",
@@ -40,6 +42,10 @@ export default function Home() {
       <PricingPlans />
       <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
       <Banner />
+      <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
+      <FAQ />
+      <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
+      <OrbitAnimation />
       <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
       <ContactUS />
     </>

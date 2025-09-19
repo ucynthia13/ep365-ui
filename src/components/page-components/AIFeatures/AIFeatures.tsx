@@ -16,12 +16,12 @@ import { Badge } from "@/components/ui/badge";
 
 const AIFeatures = () => {
     return (
-        <Section id="ai-features" className="border-divide border-x pb-20 md:pb-24">
-                <div className="flex flex-col justify-center items-center gap-4 mb-12">
-                    <Badge variant="outline" className="text-xs text-primary border-none font-medium">AI-Powered Procurement Platform</Badge>
-                    <SectionTitle title="AI-powered Procurement Platform That Thinks Ahead" className="max-w-sm mx-auto text-center" />
-                    <p className="text-muted-foreground">Seamless procurement through AI Innovation</p>
-                </div>
+        <Section id="ai-features" className="border-divide border-x py-12">
+            <div className="flex flex-col justify-center items-center gap-4 mb-12">
+                <Badge variant="outline" className="text-xs text-primary border-none font-medium">AI-Powered Procurement Platform</Badge>
+                <SectionTitle title="AI-powered Procurement Platform That Thinks Ahead" className="max-w-sm mx-auto text-center" />
+                <p className="text-muted-foreground">Seamless procurement through AI Innovation</p>
+            </div>
             <BentoGrid className="auto-rows-auto grid-rows-none">
                 {items.map((item, i) => (
                     <BentoGridItem

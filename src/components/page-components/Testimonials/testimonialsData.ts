@@ -1,11 +1,11 @@
 export   const companies = [
     { 
-      name: 'Aceternity', 
+      name: 'Some Company', 
       logo: "/images/brands/taxi.svg", 
       height: 'h-10',
       testimonial: "Our development cycle has been transformed. What used to take weeks now happens in days with automated workflows.",
       author: "Sarah Chen",
-      role: "CTO, Aceternity",
+      role: "CTO, Some Company",
       stat: "5x",
       statLabel: "Faster Deployment",
       profileImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1361&auto=format&fit=crop"

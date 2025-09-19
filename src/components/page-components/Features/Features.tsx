@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 const Features = () => {
   return (
     <>
-      <Section className="border-x border-divide pt-12 md:pt-16 pb-12 md:pb-16">
+      <Section className="border-x border-divide py-12">
         <div className="max-w-2xl mx-auto flex flex-col justify-center items-center text-center gap-4">
           <Badge variant="outline" className="text-xs text-primary border-none font-medium">Analytics</Badge>
           <SectionTitle title="Your analytics in one place"  />
