@@ -1,5 +1,6 @@
 import Image from "next/image"
 import brandsData from "./brandsData"
+import { cn } from "@/lib/utils"
 
 export default function Brands() {
   return (
@@ -9,10 +10,10 @@ export default function Brands() {
       </h2>
 
       <div className="border-divide grid grid-cols-2 border-t md:grid-cols-4">
-        {brandsData.map((logo, idx) => (
+        {brandsData.map((logo, index) => (
           <div
-            key={idx}
-            className="border-divide group relative overflow-hidden border-r border-b md:border-b md:border-r hover:bg-primary/10 transition duration-300 cursor-pointer"
+            key={index}
+            className={cn("border-divide group relative overflow-hidden border-r md:border-r hover:bg-primary/10 transition duration-300 cursor-pointer", index < 4 && "border-b", (index === 3 || index===7) && "md:border-r-0")}
           >
             <div className="animate-move-left-to-right bg-brand/5 absolute inset-x-0 bottom-0 h-full translate-y-full transition-all duration-200 group-hover:translate-y-0" />
 
