@@ -12,6 +12,8 @@ import Testimonials from "@/components/page-components/Testimonials/Testimonials
 import { Metadata } from "next";
 import FAQ from "@/components/page-components/FAQs/FAQs";
 import OrbitAnimation from "@/components/page-components/OrbitAnimation/OrbitAnimation";
+import HowItWorks from "@/components/page-components/HowItWorks/HowItWorks";
+import { items } from "@/components/page-components/HowItWorks/data";
 
 export const metadata: Metadata = {
   title: "EP365 Procurement",
@@ -27,8 +29,8 @@ export default function Home() {
       <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
       <Brands />
       <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
-      {/* <HowItWorks items={items} interval={5000} /> */}
-      {/* <div className="bg-muted-foreground/15 h-[1px] w-full"></div> */}
+      <HowItWorks items={items} interval={5000} />
+      <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
       <AIFeatures />
       <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
       <Features />
